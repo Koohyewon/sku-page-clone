@@ -34,7 +34,7 @@ body {
 /* firstSection-top*/
 .firstSection_top {
     height: 40px;
-    width: 100vw;
+    width: 100%;
     background-color: #003956;    
     display: flex;
     justify-content: space-between;
@@ -46,7 +46,7 @@ body {
     display: flex;
     align-items: center;
 }
-.top_link > a {
+.top_link a {
     text-decoration-line: none;
     color: white;
     height: 40px;
@@ -70,6 +70,7 @@ body {
     margin-right: 20px;
 }
 #languageBtn {
+    padding:0;
     color: white;
     background-color: #003956;
     border: 0;
@@ -81,5 +82,78 @@ body {
     cursor: pointer;
 }
 #kor {
-    margin: 0px 10px; 
+    margin: 0px 17px 0px 10px; 
+}
+/*
+.language_list {
+    background-color: #003956;
+    border: 1px solid #072737;
+
+    text-align: center;
+}*/
+.language_list {
+    /*nav 요소에 list가 가려지지 않도록 relative, z인덱스 설정*/
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+    overflow: hidden;
+    max-height: 0;    
+    transition: 0s;
+}
+.language_list.show {
+    
+    background-color: #003956;
+    border: 1px solid #072737;
+    transition: 0.4s;
+    max-height: 200px; /* 적당한 최대 높이 값으로 설정 */
+}
+.language_list ul {
+    margin: 0;
+    padding: 0;
+}
+.language_list ul li{
+    list-style: none;
+    border-bottom: 1px solid #072737;   
+    padding: 5px 0px;     
+}
+.language_list ul li:hover {
+    background-color: #005B89;
+}
+.language_list ul li a{
+    text-decoration-line: none;
+    color: white;
+
+}
+
+
+
+
+
+/*firstSection nav*/
+.firstSection_nav {    
+    /*nav 요소가 list를 가리지 않도록 relative, z인덱스 설정*/
+    position: relative;
+    z-index: 1;
+
+    height: 110px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    transition: 0.4s; 
+    
+    /*로고 및 nav내용 flex*/
+    display: flex;
+    justify-content: space-between;
+}
+.firstSection_nav:hover {
+    background-color: white;
+    color: black;
+}
+.logo {
+    margin-left: 20px;
+}
+.nav_contents {
+    margin-right: 20px;
 }

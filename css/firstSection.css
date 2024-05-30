@@ -138,9 +138,9 @@ body {
 
     height: 110px;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    color: white;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: rgba(0, 0, 0, 0.2);   /* black에서 투명도만 적용 */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* white에서 투명도만 적용 */
+    color: white;    
     transition: 0.4s; 
     
     /*로고 및 nav내용 flex*/

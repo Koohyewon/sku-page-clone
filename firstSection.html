@@ -1,102 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SKU-firstSection</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
+  </head>
 
-<body class="w-full h-screen m-0 p-0">
+  <body class="w-full h-screen m-0 p-0">
     <!-- firstSection container -->
     <div class="w-full h-full pb-[3px]">
-        <!--firstSection 영상 background-->
-        <div class="h-screen w-screen absolute top-0 left-0 overflow-hidden z-[-1]">
-            <video class="h-full w-full object-cover" autoplay muted playsinline loop data-keepplaying>
-              <source src="img/firstSection_video.mp4" type="video/mp4" />
-            </video>
-        </div>    
-		
-        <!--firstSection top-->
-        <div class="h-10 w-full bg-[#003956] flex justify-between">
-            <div class="ml-5 flex items-center">
-                <a href="#" class="h-10 w-[120px] bg-[#295CA4] text-center text-white leading-10 no-underline">WEBMAIL</a>
-                <a href="#" class="h-10 w-[120px] bg-[#C71514] text-center text-white leading-10 no-underline">LOGIN</a>
-                <a href="#" class="h-10 w-[120px] bg-[#676767] text-center text-white leading-10 no-underline">PORTAL</a>
-            </div>
-            <!-- global_lang -->
-            <div class="mr-5">
-                <!-- top 우측의 KOR 버튼 -->
-                <button id="languageBtn" class="h-10 flex items-center p-0 bg-[#003956] text-white border-none cursor-pointer">
-                    <img src="img/global_icon.png"/>
-                    <p id="kor" class="ml-2.5 mr-[17px]">KOR</p>
-                    <img src="img/arrow_icon.png"/>
-                </button>
+      <!--firstSection 영상 background-->
+      <div
+        class="h-screen w-screen absolute top-0 left-0 overflow-hidden z-[-1]">
+        <video
+          class="h-full w-full object-cover"
+          autoplay
+          muted
+          playsinline
+          loop
+          data-keepplaying>
+          <source src="img/firstSection_video.mp4" type="video/mp4" />
+        </video>
+      </div>
 
-                <!-- KOR버튼을 클릭하면 language list 등장 -->
-                <!-- language_list가 nav에 가려지는 걸 막기 위해 relative & z-index 적용 -->
-                <div class="language_list bg-[#003956] relative z-10 border border-[#072737] text-center hidden transition-all duration-400 max-h-0 overflow-hidden">
-                    <ul class="m-0 p-0 list-none divide-y-[1px] divide-solid divide-[#072737] text-white">
-                        <li class="py-[5px] hover:bg-[#005B89]"><a href="https://www.sungkyul.ac.kr/sites/skueng/index..do" target="_blank">ENG</a></li>
-                        <li class="py-[5px] hover:bg-[#005B89]"><a href="https://www.sungkyul.ac.kr/sites/skujpn/index..do" target="_blank">JPN</a></li>
-                        <li class="py-[5px] hover:bg-[#005B89]"><a href="https://www.sungkyul.ac.kr/sites/skuchn/index..do" target="_blank">CHN</a></li>
-                    </ul>
-                </div>
-            </div>
+      <!--firstSection top-->
+      <div class="h-10 w-full bg-[#003956] flex justify-between">
+        <div class="ml-5 flex items-center">
+          <a
+            href="#"
+            class="h-10 w-[120px] bg-[#295CA4] text-center text-white leading-10 no-underline"
+            >WEBMAIL</a
+          >
+          <a
+            href="#"
+            class="h-10 w-[120px] bg-[#C71514] text-center text-white leading-10 no-underline"
+            >LOGIN</a
+          >
+          <a
+            href="#"
+            class="h-10 w-[120px] bg-[#676767] text-center text-white leading-10 no-underline"
+            >PORTAL</a
+          >
+        </div>
+        <!-- global_lang -->
+        <div class="mr-5">
+          <!-- top 우측의 KOR 버튼 -->
+          <button
+            id="languageBtn"
+            class="h-10 flex items-center p-0 bg-[#003956] text-white border-none cursor-pointer">
+            <img src="img/global_icon.png" />
+            <p id="kor" class="ml-2.5 mr-[17px]">KOR</p>
+            <img src="img/arrow_icon.png" />
+          </button>
+
+          <!-- KOR버튼을 클릭하면 language list 등장 -->
+          <!-- language_list가 nav에 가려지는 걸 막기 위해 relative & z-index 적용 -->
+          <div
+            class="language_list bg-[#003956] relative z-10 border border-[#072737] text-center hidden transition-all duration-400 max-h-0 overflow-hidden">
+            <ul
+              class="m-0 p-0 list-none divide-y-[1px] divide-solid divide-[#072737] text-white">
+              <li class="py-[5px] hover:bg-[#005B89]">
+                <a
+                  href="https://www.sungkyul.ac.kr/sites/skueng/index..do"
+                  target="_blank"
+                  >ENG</a
+                >
+              </li>
+              <li class="py-[5px] hover:bg-[#005B89]">
+                <a
+                  href="https://www.sungkyul.ac.kr/sites/skujpn/index..do"
+                  target="_blank"
+                  >JPN</a
+                >
+              </li>
+              <li class="py-[5px] hover:bg-[#005B89]">
+                <a
+                  href="https://www.sungkyul.ac.kr/sites/skuchn/index..do"
+                  target="_blank"
+                  >CHN</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!--firstSection nav-->
+      <!-- nav에 language_list가 가려지는 걸 막기 위해 relative & z-index 적용 -->
+      <div
+        class="h-[110px] w-full flex justify-between items-center relative z-0 bg-black/[.2] border-white/[.15] border-b text-white transition duration-300 hover:bg-white hover:text-black">
+        <!-- 나브에 마우스 대면 배경 하얘지는데, 로고도 같이 logo_blue로 변하게 해야함 -->
+        <!-- 최대한 이미지는 svg로 해보기 -->
+
+        <!-- logo -->
+        <div class="ml-10">
+          <a href="/firstSection.html">
+            <img src="img/logo_white.png" />
+          </a>
         </div>
 
-        <!--firstSection nav-->
-        <!-- nav에 language_list가 가려지는 걸 막기 위해 relative & z-index 적용 -->
-        <div class="h-[110px] w-full flex justify-between items-center relative z-0 bg-black/[.2] border-white/[.15] border-b text-white transition duration-300 hover:bg-white hover:text-black">
-            <!-- 나브에 마우스 대면 배경 하얘지는데, 로고도 같이 logo_blue로 변하게 해야함 -->          
-            <!-- 최대한 이미지는 svg로 해보기 -->
-
-            <!-- logo -->
-            <div class="ml-10 ">
-                <a href="/firstSection.html">
-                    <img src="img/logo_white.png"/>
-                </a>                
+        <!-- nav contents -->
+        <div class="mr-10 flex justify-evenly">
+          <div class="pr-[30px] text-xl">
+            <div class="inline cursor-pointer">
+              <span>성결소개</span>
             </div>
 
-            <!-- nav contents -->
-            <div class="mr-10 flex justify-evenly">
-                <div class="pr-[30px] text-xl">
-                    <div class="inline cursor-pointer">
-                        <span>성결소개</span>
-                    </div>
-
-                    <div class="inline-block cursor-pointer">
-                        <span>대학/대학원</span>
-                    </div>
-
-                    <div class="inline-block cursor-pointer">
-                        <span>입학안내</span>
-                    </div>
-
-                    <div class="inline-block cursor-pointer">
-                        <span>대학생활</span>
-                    </div>
-
-                    <div class="inline-block cursor-pointer">
-                        <span>서비스</span>
-                    </div>
-
-                    <div class="inline-block cursor-pointer">
-                        <span>성결광장</span>
-                    </div>
-                </div>
-
-                <div>
-                    검색창
-                </div>
+            <div class="inline-block cursor-pointer">
+              <span>대학/대학원</span>
             </div>
+
+            <div class="inline-block cursor-pointer">
+              <span>입학안내</span>
+            </div>
+
+            <div class="inline-block cursor-pointer">
+              <span>대학생활</span>
+            </div>
+
+            <div class="inline-block cursor-pointer">
+              <span>서비스</span>
+            </div>
+
+            <div class="inline-block cursor-pointer">
+              <span>성결광장</span>
+            </div>
+          </div>
+
+          <div>검색창</div>
         </div>
+      </div>
     </div>
 
     <script src="js/firstSection.js"></script>
-</body>
+  </body>
 
-<!--
+  <!--
 <body class="m-0 p-0 w-full h-screen relative overflow-hidden">
     <div class="relative w-full h-full">
         
@@ -151,5 +191,4 @@
 
     <script src="js/firstSection.js"></script>
 </body>
--->
-</html>
+--></html>

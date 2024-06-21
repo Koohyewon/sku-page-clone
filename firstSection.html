@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SKU-firstSection</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/firstSection.css" />
   </head>
 
   <body class="w-full h-screen m-0 p-0">
     <!-- firstSection container -->
-    <div class="w-full h-full pb-[3px]">
+    <div class="Noto w-full h-full pb-[3px]">
       <!--firstSection 영상 background-->
       <div
         class="h-screen w-screen absolute top-0 left-0 overflow-hidden z-[-1]">
@@ -26,7 +33,7 @@
 
       <!--firstSection top-->
       <div class="h-10 w-full bg-[#003956] flex justify-between">
-        <div class="ml-5 flex items-center">
+        <div class="ml-5 flex items-center font-[330]">
           <a
             href="#"
             class="h-10 w-[120px] bg-[#295CA4] text-center text-white leading-10 no-underline"
@@ -50,14 +57,14 @@
             id="languageBtn"
             class="h-10 flex items-center p-0 bg-[#003956] text-white border-none cursor-pointer">
             <img src="img/global_icon.png" />
-            <p id="kor" class="ml-2.5 mr-[17px]">KOR</p>
+            <p id="kor" class="ml-2.5 mr-[17px] text-sm font-medium">KOR</p>
             <img src="img/arrow_icon.png" />
           </button>
 
           <!-- KOR버튼을 클릭하면 language list 등장 -->
           <!-- language_list가 nav에 가려지는 걸 막기 위해 relative & z-index 적용 -->
           <div
-            class="language_list bg-[#003956] relative z-10 border border-[#072737] text-center hidden transition-all duration-400 max-h-0 overflow-hidden">
+            class="language_list bg-[#003956] relative z-10 border border-[#072737] text-center hidden transition-all duration-[400ms] max-h-0 overflow-hidden">
             <ul
               class="m-0 p-0 list-none divide-y-[1px] divide-solid divide-[#072737] text-white">
               <li class="py-[5px] hover:bg-[#005B89]">
@@ -89,106 +96,213 @@
       <!--firstSection nav-->
       <!-- nav에 language_list가 가려지는 걸 막기 위해 relative & z-index 적용 -->
       <div
-        class="h-[110px] w-full flex justify-between items-center relative z-0 bg-black/[.2] border-white/[.15] border-b text-white transition duration-300 hover:bg-white hover:text-black">
-        <!-- 나브에 마우스 대면 배경 하얘지는데, 로고도 같이 logo_blue로 변하게 해야함 -->
-        <!-- 최대한 이미지는 svg로 해보기 -->
+        class="nav h-[110px] w-full flex justify-between items-center relative z-0 bg-black/[.2] border-white/[.15] border-b text-white transition duration-300 hover:bg-white hover:text-black">
+        <!-- 최대한 이미지는 svg로 해보기 /일단 완성 하고 로고 변경해보기 -->
 
         <!-- logo -->
-        <div class="ml-10">
+        <div class="ml-5">
           <a href="/firstSection.html">
-            <img src="img/logo_white.png" />
+            <img src="img/logo_white.png" class="logo-img" />
           </a>
         </div>
 
         <!-- nav contents -->
-        <div class="mr-10 flex justify-evenly">
-          <div class="pr-[30px] text-xl">
-            <div class="inline cursor-pointer">
-              <span>성결소개</span>
+        <div class="mr-5 flex flex-1 justify-between items-center">
+          <div
+            class="text-xl font-medium flex flex-1 items-center justify-between pl-[140px] pr-[12%]">
+            <div class="group block cursor-pointer">
+              <a
+                href="https://www.sungkyul.ac.kr/skukr/233/subview.do"
+                class="py-[40px] relative">
+                성결소개
+                <span
+                  class="absolute left-0 right-0 bottom-7 h-[4px] bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+                <span
+                  class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-2.5 w-[6px] h-[6px] rounded-full bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+              </a>
+
+              <!--nav 목록/성결소개-->
+              <div
+                class="absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto">
+                <div
+                  class="px-[70px] py-12 grid grid-cols-5 gap-16 font-normal text-lg">
+                  <div>
+                    <a
+                      href="https://www.sungkyul.ac.kr/skukr/233/subview.do"
+                      class="py-[40px] relative">
+                      교육이념
+                    </a>
+                    <!--구분선-->
+                    <div
+                      class="w-full border-[1px] border-black/[.05] my-2"></div>
+                    <div class="font-light text-sm">
+                      <ul class="list-none my-2">
+                        <li class="flex items-center mb-2 mr-4">
+                          <div class="w-1 h-1 bg-gray-500 mr-2"></div>
+                          <a
+                            href="https://www.sungkyul.ac.kr/skukr/233/subview.do">
+                            대학이념
+                          </a>
+                        </li>
+
+                        <li class="flex items-center mb-2 mr-4">
+                          <div class="w-1 h-1 bg-gray-500 mr-2"></div>
+                          <a
+                            href="https://www.sungkyul.ac.kr/skukr/234/subview.do">
+                            VISION 2030
+                          </a>
+                        </li>
+
+                        <li class="flex items-center mb-2 mr-4">
+                          <div class="w-1 h-1 bg-gray-500 mr-2"></div>
+                          <a
+                            href="https://www.sungkyul.ac.kr/skukr/235/subview.do">
+                            대학별 교육목표
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div>소개2</div>
+                  <div>소개3</div>
+                  <div>소개4</div>
+                  <div>소개5</div>
+                  <div>소개6</div>
+                  <div>소개7</div>
+                  <div>소개8</div>
+                </div>
+              </div>
             </div>
 
-            <div class="inline-block cursor-pointer">
-              <span>대학/대학원</span>
+            <div class="group inline cursor-pointer">
+              <a
+                href="https://www.sungkyul.ac.kr/skukr/487/subview.do"
+                class="py-[40px] relative">
+                대학/대학원
+                <span
+                  class="absolute left-0 right-0 bottom-7 h-[4px] bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+                <span
+                  class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-2.5 w-[6px] h-[6px] rounded-full bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+              </a>
+
+              <!--nav 목록/대학/대학원-->
+              <div
+                class="absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:max-h- group-hover:opacity-100 group-hover:pointer-events-auto">
+                <div class="px-[70px] py-12 grid grid-cols-5 gap-16">
+                  <div>대학/대학원1</div>
+                  <div>대학/대학원2</div>
+                  <div>대학/대학원3</div>
+                </div>
+              </div>
             </div>
 
-            <div class="inline-block cursor-pointer">
-              <span>입학안내</span>
+            <div class="group inline cursor-pointer">
+              <a
+                href="https://www.sungkyul.ac.kr/ipsi/index.do"
+                class="py-[40px] relative">
+                입학안내
+                <span
+                  class="absolute left-0 right-0 bottom-7 h-[4px] bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+                <span
+                  class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-2.5 w-[6px] h-[6px] rounded-full bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+              </a>
+
+              <!--nav 목록/입학안내-->
+              <div
+                class="absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:max-h- group-hover:opacity-100 group-hover:pointer-events-auto">
+                <div class="px-[70px] py-12 grid grid-cols-5 gap-16">
+                  <div>입학안내1</div>
+                  <div>입학안내2</div>
+                  <div>입학안내3</div>
+                  <div>입학안내4</div>
+                </div>
+              </div>
             </div>
 
-            <div class="inline-block cursor-pointer">
-              <span>대학생활</span>
+            <div class="group inline cursor-pointer">
+              <a
+                href="https://www.sungkyul.ac.kr/skukr/640/subview.do"
+                class="py-[40px] relative">
+                대학생활
+                <span
+                  class="absolute left-0 right-0 bottom-7 h-[4px] bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+                <span
+                  class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-2.5 w-[6px] h-[6px] rounded-full bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+              </a>
+
+              <!--nav 목록/대학생활-->
+              <div
+                class="absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:max-h- group-hover:opacity-100 group-hover:pointer-events-auto">
+                <div class="px-[70px] py-12 grid grid-cols-5 gap-16">
+                  <div>대학생활1</div>
+                  <div>대학생활2</div>
+                  <div>대학생활3</div>
+                  <div>대학생활4</div>
+                </div>
+              </div>
             </div>
 
-            <div class="inline-block cursor-pointer">
-              <span>서비스</span>
+            <div class="group inline cursor-pointer">
+              <a
+                href="https://www.sungkyul.ac.kr/skukr/313/subview.do"
+                class="py-[40px] relative">
+                서비스
+                <span
+                  class="absolute left-0 right-0 bottom-7 h-[4px] bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+                <span
+                  class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-2.5 w-[6px] h-[6px] rounded-full bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+              </a>
+
+              <!--nav 목록/서비스-->
+              <div
+                class="absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:max-h- group-hover:opacity-100 group-hover:pointer-events-auto">
+                <div class="px-[70px] py-12 grid grid-cols-5 gap-16">
+                  <div>서비스1</div>
+                  <div>서비스2</div>
+                  <div>서비스3</div>
+                  <div>서비스4</div>
+                  <div>서비스5</div>
+                  <div>서비스6</div>
+                  <div>서비스7</div>
+                  <div>서비스8</div>
+                </div>
+              </div>
             </div>
 
-            <div class="inline-block cursor-pointer">
-              <span>성결광장</span>
+            <div class="group inline cursor-pointer">
+              <a
+                href="https://www.sungkyul.ac.kr/skukr/342/subview.do"
+                class="py-[40px] relative">
+                성결광장
+                <span
+                  class="absolute left-0 right-0 bottom-7 h-[4px] bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+                <span
+                  class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-2.5 w-[6px] h-[6px] rounded-full bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+              </a>
+
+              <!--nav 목록/성결광장-->
+              <div
+                class="absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:max-h- group-hover:opacity-100 group-hover:pointer-events-auto">
+                <div class="px-[70px] py-12 grid grid-cols-5 gap-16">
+                  <div>성결광장1</div>
+                  <div>성결광장2</div>
+                  <div>성결광장3</div>
+                  <div>성결광장4</div>
+                  <div>성결광장5</div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div>검색창</div>
+          <div class="flex">
+            <div class="mr-[90px]">검색</div>
+            <div>메뉴</div>
+          </div>
         </div>
       </div>
     </div>
 
     <script src="js/firstSection.js"></script>
   </body>
-
-  <!--
-<body class="m-0 p-0 w-full h-screen relative overflow-hidden">
-    <div class="relative w-full h-full">
-        
-        <div class="absolute top-0 left-0 w-full h-full z-[-1] overflow-hidden">
-            <video class="w-full h-full object-cover" autoplay muted playsinline loop>
-              <source src="img/firstSection_video.mp4" type="video/mp4" />
-            </video>
-        </div>    
-
-        
-        <div class="h-10 w-full bg-[#003956] flex justify-between items-center">
-            <div class="flex ml-5 space-x-4">
-                <a href="#" class="text-white h-10 w-28 text-center leading-10 bg-[#295CA4]">WEBMAIL</a>
-                <a href="#" class="text-white h-10 w-28 text-center leading-10 bg-[#C71514]">LOGIN</a>
-                <a href="#" class="text-white h-10 w-28 text-center leading-10 bg-[#676767]">PORTAL</a>
-            </div>
-
-            <div class="mr-5 relative">
-                <button id="languageBtn" class="text-white bg-[#003956] h-10 flex items-center cursor-pointer">
-                    <img src="img/global_icon.png" class="h-5 w-5 ml-2" />
-                    <p id="kor" class="mx-4">KOR</p>
-                    <img src="img/arrow_icon.png" class="h-5 w-5 mr-2" />
-                </button>
-
-                <div class="language_list absolute top-full left-0 w-full bg-[#003956] border border-[#072737] text-center hidden transition-all duration-400">
-                    <ul class="m-0 p-0">
-                      <li class="border-b border-[#072737]"><a href="https://www.sungkyul.ac.kr/sites/skueng/index..do" target="_blank" class="block py-2 text-white hover:bg-[#005B89]">ENG</a></li>
-                      <li class="border-b border-[#072737]"><a href="https://www.sungkyul.ac.kr/sites/skujpn/index..do" target="_blank" class="block py-2 text-white hover:bg-[#005B89]">JPN</a></li>
-                      <li><a href="https://www.sungkyul.ac.kr/sites/skuchn/index..do" target="_blank" class="block py-2 text-white hover:bg-[#005B89]">CHN</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        
-        <div class="relative z-1 h-28 w-full bg-black bg-opacity-20 border-b border-white border-opacity-15 text-white flex justify-between items-center transition-all duration-400 hover:bg-white hover:text-black">   
-            <div class="ml-5">
-                <img src="img/logo_white.png" class="transition-all duration-400 hover:filter invert" />
-            </div>
-
-            <div class="mr-5 flex">
-                <div>
-                    성결대 나브내용
-                </div>
-
-                <div class="ml-5">
-                    검색창
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="js/firstSection.js"></script>
-</body>
---></html>
+</html>

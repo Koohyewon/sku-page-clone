@@ -110,6 +110,7 @@
         <div class="mr-5 flex flex-1 justify-between items-center">
           <div
             class="text-xl font-medium flex flex-1 items-center justify-between pl-[140px] pr-[12%]">
+            <!-- 성결소개 -->
             <div class="group block cursor-pointer">
               <a
                 href="https://www.sungkyul.ac.kr/skukr/233/subview.do"
@@ -123,58 +124,17 @@
 
               <!--nav 목록/성결소개-->
               <div
-                class="absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto">
+                id="submenu-sungkyul"
+                class="submenu absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:max-h-screen group-hover:opacity-100 group-hover:pointer-events-auto">
                 <div
-                  class="px-[70px] py-12 grid grid-cols-5 gap-16 font-normal text-lg">
-                  <div>
-                    <a
-                      href="https://www.sungkyul.ac.kr/skukr/233/subview.do"
-                      class="py-[40px] relative">
-                      교육이념
-                    </a>
-                    <!--구분선-->
-                    <div
-                      class="w-full border-[1px] border-black/[.05] my-2"></div>
-                    <div class="font-light text-sm">
-                      <ul class="list-none my-2">
-                        <li class="flex items-center mb-2 mr-4">
-                          <div class="w-1 h-1 bg-gray-500 mr-2"></div>
-                          <a
-                            href="https://www.sungkyul.ac.kr/skukr/233/subview.do">
-                            대학이념
-                          </a>
-                        </li>
-
-                        <li class="flex items-center mb-2 mr-4">
-                          <div class="w-1 h-1 bg-gray-500 mr-2"></div>
-                          <a
-                            href="https://www.sungkyul.ac.kr/skukr/234/subview.do">
-                            VISION 2030
-                          </a>
-                        </li>
-
-                        <li class="flex items-center mb-2 mr-4">
-                          <div class="w-1 h-1 bg-gray-500 mr-2"></div>
-                          <a
-                            href="https://www.sungkyul.ac.kr/skukr/235/subview.do">
-                            대학별 교육목표
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div>소개2</div>
-                  <div>소개3</div>
-                  <div>소개4</div>
-                  <div>소개5</div>
-                  <div>소개6</div>
-                  <div>소개7</div>
-                  <div>소개8</div>
+                  class="px-[70px] py-12 grid grid-cols-5 gap-16 font-normal text-lg"
+                  id="submenu-content-sungkyul">
+                  <!-- 세부목록은 js로 처리 -->
                 </div>
               </div>
             </div>
 
+            <!-- 대학/대학원 -->
             <div class="group inline cursor-pointer">
               <a
                 href="https://www.sungkyul.ac.kr/skukr/487/subview.do"
@@ -185,18 +145,18 @@
                 <span
                   class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-2.5 w-[6px] h-[6px] rounded-full bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
               </a>
-
-              <!--nav 목록/대학/대학원-->
               <div
-                class="absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:max-h- group-hover:opacity-100 group-hover:pointer-events-auto">
-                <div class="px-[70px] py-12 grid grid-cols-5 gap-16">
-                  <div>대학/대학원1</div>
-                  <div>대학/대학원2</div>
-                  <div>대학/대학원3</div>
+                id="submenu-college"
+                class="submenu absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:max-h-screen group-hover:opacity-100 group-hover:pointer-events-auto">
+                <div
+                  class="px-[70px] py-12 grid grid-cols-5 gap-16 font-normal text-lg"
+                  id="submenu-content-college">
+                  <!-- 세부목록은 js로 처리 -->
                 </div>
               </div>
             </div>
 
+            <!-- 입학안내 -->
             <div class="group inline cursor-pointer">
               <a
                 href="https://www.sungkyul.ac.kr/ipsi/index.do"
@@ -207,19 +167,18 @@
                 <span
                   class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-2.5 w-[6px] h-[6px] rounded-full bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
               </a>
-
-              <!--nav 목록/입학안내-->
               <div
-                class="absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:max-h- group-hover:opacity-100 group-hover:pointer-events-auto">
-                <div class="px-[70px] py-12 grid grid-cols-5 gap-16">
-                  <div>입학안내1</div>
-                  <div>입학안내2</div>
-                  <div>입학안내3</div>
-                  <div>입학안내4</div>
+                id="submenu-admission"
+                class="submenu absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:max-h-screen group-hover:opacity-100 group-hover:pointer-events-auto">
+                <div
+                  class="px-[70px] py-12 grid grid-cols-5 gap-16 font-normal text-lg"
+                  id="submenu-content-admission">
+                  <!-- 세부목록은 js로 처리 -->
                 </div>
               </div>
             </div>
 
+            <!-- 대학생활 -->
             <div class="group inline cursor-pointer">
               <a
                 href="https://www.sungkyul.ac.kr/skukr/640/subview.do"
@@ -230,19 +189,18 @@
                 <span
                   class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-2.5 w-[6px] h-[6px] rounded-full bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
               </a>
-
-              <!--nav 목록/대학생활-->
               <div
-                class="absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:max-h- group-hover:opacity-100 group-hover:pointer-events-auto">
-                <div class="px-[70px] py-12 grid grid-cols-5 gap-16">
-                  <div>대학생활1</div>
-                  <div>대학생활2</div>
-                  <div>대학생활3</div>
-                  <div>대학생활4</div>
+                id="submenu-campuslife"
+                class="submenu absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:max-h-screen group-hover:opacity-100 group-hover:pointer-events-auto">
+                <div
+                  class="px-[70px] py-12 grid grid-cols-5 gap-16 font-normal text-lg"
+                  id="submenu-content-campuslife">
+                  <!-- 세부목록은 js로 처리 -->
                 </div>
               </div>
             </div>
 
+            <!-- 서비스 -->
             <div class="group inline cursor-pointer">
               <a
                 href="https://www.sungkyul.ac.kr/skukr/313/subview.do"
@@ -253,23 +211,18 @@
                 <span
                   class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-2.5 w-[6px] h-[6px] rounded-full bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
               </a>
-
-              <!--nav 목록/서비스-->
               <div
-                class="absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:max-h- group-hover:opacity-100 group-hover:pointer-events-auto">
-                <div class="px-[70px] py-12 grid grid-cols-5 gap-16">
-                  <div>서비스1</div>
-                  <div>서비스2</div>
-                  <div>서비스3</div>
-                  <div>서비스4</div>
-                  <div>서비스5</div>
-                  <div>서비스6</div>
-                  <div>서비스7</div>
-                  <div>서비스8</div>
+                id="submenu-service"
+                class="submenu absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:max-h-screen group-hover:opacity-100 group-hover:pointer-events-auto">
+                <div
+                  class="px-[70px] py-12 grid grid-cols-5 gap-16 font-normal text-lg"
+                  id="submenu-content-service">
+                  <!-- 세부목록은 js로 처리 -->
                 </div>
               </div>
             </div>
 
+            <!-- 성결광장 -->
             <div class="group inline cursor-pointer">
               <a
                 href="https://www.sungkyul.ac.kr/skukr/342/subview.do"
@@ -280,23 +233,49 @@
                 <span
                   class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-2.5 w-[6px] h-[6px] rounded-full bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
               </a>
-
-              <!--nav 목록/성결광장-->
               <div
-                class="absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:max-h- group-hover:opacity-100 group-hover:pointer-events-auto">
-                <div class="px-[70px] py-12 grid grid-cols-5 gap-16">
-                  <div>성결광장1</div>
-                  <div>성결광장2</div>
-                  <div>성결광장3</div>
-                  <div>성결광장4</div>
-                  <div>성결광장5</div>
+                id="submenu-square"
+                class="submenu absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:max-h-screen group-hover:opacity-100 group-hover:pointer-events-auto">
+                <div
+                  class="px-[70px] py-12 grid grid-cols-5 gap-16 font-normal text-lg"
+                  id="submenu-content-square">
+                  <!-- 세부목록은 js로 처리 -->
                 </div>
               </div>
             </div>
           </div>
 
           <div class="flex">
-            <div class="mr-[90px]">검색</div>
+            <div class="mr-[90px]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="100"
+                height="100"
+                viewBox="0,0,256,256">
+                <g
+                  fill="#ffffff"
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(5.12,5.12)">
+                    <path
+                      d="M21,3c-9.39844,0 -17,7.60156 -17,17c0,9.39844 7.60156,17 17,17c3.35547,0 6.46094,-0.98437 9.09375,-2.65625l12.28125,12.28125l4.25,-4.25l-12.125,-12.09375c2.17969,-2.85937 3.5,-6.40234 3.5,-10.28125c0,-9.39844 -7.60156,-17 -17,-17zM21,7c7.19922,0 13,5.80078 13,13c0,7.19922 -5.80078,13 -13,13c-7.19922,0 -13,-5.80078 -13,-13c0,-7.19922 5.80078,-13 13,-13z"></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
             <div>메뉴</div>
           </div>
         </div>

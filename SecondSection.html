@@ -8,6 +8,7 @@
         <script src="./js/SecondSection.js" defer></script>
         <script src="./js/SecondSectionSchedule.js" defer></script>
         <script src="/js/SecondSectionSchedule2.js" defer></script>
+        <script src="/js/AboutSKU.js" defer></script>
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +18,7 @@
 
     </head>
     <body class="Noto w-full h-screen m-0 p-0">
-        <div class="w-full h-auto grid lg:grid-cols-2 grid-cols-1 bg-[url('./img/SecondSectionBG.jpg')] bg-cover my-[8%] py-[70px] px-[30px]">
+        <div class="w-full h-auto grid lg:grid-cols-2 grid-cols-1 bg-[url('./img/SecondSectionBG.jpg')] bg-cover py-[70px] px-[30px]">
             <!--SecondSection_left: 두번째 왼쪽-->
             <div class="grid-rows-2 lg:pr-[30px] pr-0">
                 <!--left_top: 왼쪽 위-->
@@ -99,26 +100,10 @@
                 </div>
                 <!--ABOUT SKU(배너이미자만 넘어가는 부분)-->
                 <div class="SecondSection_right_second m-0 p-0">
-                    <div class="flex flex-row items-center justify-between mt-[38px] mb-[19px]">
-                        <h2 class="titillium text-[34px]">ABOUT SKU</h2>
-                        <div class="flex flex-row">
-                            <span class="titillium text-black text-[14px]">01</span>
-                            <img class="mx-[5px]" src="/img/ABOUTSKUSL.png" alt="">
-                            <span class="titillium text-[#9299a6] text-[14px] mr-[15px]">06</span>
-                            <img class="cursor-pointer h-[16px]" src="/img/ABOUTSKUPrevICON.png" alt="">
-                            <img class="cursor-pointer h-[16px] mx-[10px]" src="/img/ABOUTSKUStopICON.png" alt="">
-                            <img class="cursor-pointer h-[16px]" src="/img/ABOUTSKUNextICON.png" alt="">
-                        </div>
+                    <div class="AboutSKU">
+                        <!-- AboutSKU는 js로 렌더링 -->
                     </div>
-                    <div>
-                        <a href="">
-                            <div class="relative">
-                                <img class="w-full" src="/img/AboutSKUBG1.jpg" alt="">
-                                <div class="absolute left-0 bottom-0 w-full py-[10px] px-[20px] bg-[rgba(26,47,66,0.9)] text-16px text-white">홍보 아이템 제보 안내</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                </div>                
             </div>
         </div>
     </body>

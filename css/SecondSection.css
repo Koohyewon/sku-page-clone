@@ -26,7 +26,6 @@ a:hover{
   text-decoration: none;
 }
 
-
 .button:focus {
   background: #c71514;
   width: 60px;
@@ -37,7 +36,6 @@ a:hover{
   color: white;
   overflow: initial;
 }
-
 
 .scheduletemplate:hover {
   background-color: #F7F7F7;

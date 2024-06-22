@@ -18,3 +18,19 @@ function ServicechangeBtn() {
 
     btnimg.innerHTML = html;
 }
+
+// 아이콘 y축 360도 회전 js
+const icons = document.querySelectorAll('.RotateYIcon');
+
+icons.forEach(icon => {
+    icon.addEventListener('mouseover', () => {
+        icon.classList.remove('rotate-y-0');
+        icon.classList.add('rotate-y-360');
+    });
+
+    icon.addEventListener('mouseout', () => {
+        icon.classList.remove('rotate-y-360');
+        icon.classList.add('rotate-y-0');
+    });
+});
+

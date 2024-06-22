@@ -9,26 +9,26 @@
   font-optical-sizing: auto;
   font-style: normal;
 }
-/* a태그 기본 설정 */
-
-a:link{
+/*'자주 찾는 서비스' a 태그 기본 설정*/
+.service_title_a:link{
   color: #A5A9AC;
   text-decoration: none;
 }
 
-a:visited{
+.service_title_a:visited{
   color: #A5A9AC;
   text-decoration: none;
 }
 
-a:hover{
+.service_title_a:hover{
   color: #A5A9AC;
   text-decoration: none;
 }
 
-.button:focus {
+/*분야별 일정 버튼 ul 버튼 기본 설정*/
+.Schedulebtn:focus {
   background: #c71514;
-  width: 60px;
+  width: 100%;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   transform: scaleY(1.3);
   transform-origin: bottom center;
@@ -42,19 +42,19 @@ a:hover{
   transition: .4s;
 }
 
-
 .scheduletemplateC:hover {
   color: #C7161C;
   font-weight: 600;
 }
 
+/*텍스가 div 넘치려고 할 때 ∙∙∙ 처리*/
 .truncate {
   display: inline-block;
   text-overflow: ellipsis; /*텍스가 div 넘치려고 할 때 ∙∙∙ 처리*/
   white-space: nowrap; /*텍스트가 길어서 부모 요소 안의 가로폭을 넘어가더라도 자동으로 줄바꿈 처리 X*/
 }
 
-/*SecondSection 오른쪽 부분 위쪽*/
+/*자주 찾는 서비스 밑줄*/
 .service_title{
   display: block;
   padding-top: 6px;
@@ -85,3 +85,10 @@ a:hover{
   animation: rotate-axis 10s linear infinite;
 }
 
+/*아이콘 y축 기준 360도 회전*/
+.rotate-y-0 {
+  transform: rotateY(0deg);
+}
+.rotate-y-360 {
+  transform: rotateY(360deg);
+}

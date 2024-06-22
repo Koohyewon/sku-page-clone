@@ -36,8 +36,16 @@ function displaySchedule2(schedule) {
     let scheduletemplate2 = '';
 
     scheduletemplate2 += `
+        <style>
+                .rotate-y-0 {
+        transform: rotateY(0deg);
+        }
+        .rotate-y-360 {
+        transform: rotateY(360deg);
+        }
+        </style>
         <div class="flex flex-row box-border mb-[20px] w-2/4 overflow-hidden">
-            <div class="titillium flex items-center justify-center w-[60px] h-[60px] bg-[#275fa8] rounded-full bg-[url('./img/SecondSectionScheduleRoundIconBG.png')] text-white text-[26px] font-normal">
+            <div class="RotateYIcon transition-transform duration-[650ms] rotate-y-0 titillium flex items-center justify-center w-[60px] h-[60px] bg-[#275fa8] rounded-full bg-[url('./img/SecondSectionScheduleRoundIconBG.png')] text-white text-[26px] font-normal">
                 ${schedule.day1}
             </div>
             <div class="inline-block h-[60px] pl-[15px] flex flex-col justify-center">
@@ -46,7 +54,7 @@ function displaySchedule2(schedule) {
             </div>
         </div>
         <div class="flex flex-row mb-[20px] w-2/4">
-            <div class="titillium flex items-center justify-center w-[60px] h-[60px] bg-[#275fa8] rounded-full bg-[url('./img/SecondSectionScheduleRoundIconBG.png')] text-white text-[26px] font-normal">
+            <div class="RotateYIcon transition-transform duration-[650ms] rotate-y-0 titillium flex items-center justify-center w-[60px] h-[60px] bg-[#275fa8] rounded-full bg-[url('./img/SecondSectionScheduleRoundIconBG.png')] text-white text-[26px] font-normal">
                 ${schedule.day2}
             </div>
             <div class="h-[60px] pl-[15px] flex flex-col justify-center">
@@ -55,7 +63,7 @@ function displaySchedule2(schedule) {
             </div>
         </div>
         <div class="flex flex-row mb-[20px] w-2/4">
-            <div class="titillium flex items-center justify-center w-[60px] h-[60px] bg-[#275fa8] rounded-full bg-[url('./img/SecondSectionScheduleRoundIconBG.png')] text-white text-[26px] font-normal">
+            <div class="RotateYIcon transition-transform duration-[650ms] rotate-y-0 titillium flex items-center justify-center w-[60px] h-[60px] bg-[#275fa8] rounded-full bg-[url('./img/SecondSectionScheduleRoundIconBG.png')] text-white text-[26px] font-normal">
                 ${schedule.day3}
             </div>
             <div class="h-[60px] pl-[15px] flex flex-col justify-center">
@@ -64,7 +72,7 @@ function displaySchedule2(schedule) {
             </div>
         </div>
         <div class="flex flex-row mb-[20px] w-2/4">
-            <div class="titillium flex items-center justify-center w-[60px] h-[60px] bg-[#275fa8] rounded-full bg-[url('./img/SecondSectionScheduleRoundIconBG.png')] text-white text-[26px] font-normal">
+            <div class="RotateYIcon transition-transform duration-[650ms] rotate-y-0 titillium flex items-center justify-center w-[60px] h-[60px] bg-[#275fa8] rounded-full bg-[url('./img/SecondSectionScheduleRoundIconBG.png')] text-white text-[26px] font-normal">
                 ${schedule.day4}
             </div>
             <div class="h-[60px] pl-[15px] flex flex-col justify-center">

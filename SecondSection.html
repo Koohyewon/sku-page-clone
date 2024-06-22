@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="./css/SecondSection.css">
-        <script src="./js/SecondSection.js" defer></script>
-        <script src="./js/SecondSectionSchedule.js" defer></script>
+        <script src="/js/SecondSectionBtn.js" defer></script>
+        <script src="/js/SecondSectionSchedule.js" defer></script>
         <script src="/js/SecondSectionSchedule2.js" defer></script>
         <script src="/js/AboutSKU.js" defer></script>
         <script src="https://cdn.tailwindcss.com"></script>
@@ -15,7 +15,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-
     </head>
     <body class="Noto w-full h-screen m-0 p-0">
         <div class="w-full h-auto grid lg:grid-cols-2 grid-cols-1 bg-[url('./img/SecondSectionBG.jpg')] bg-cover py-[70px] px-[30px]">
@@ -72,8 +71,13 @@
             <div class="lg:pl-[20px] pl-0">
                 <!--자주찾는 서비스-->
                 <div class="box-border flex-col mt-[30px] lg:mt-0 bg-[url('./img/SecondSectionServiceBg.png')] h-[250px] bg-right-bottom bg-no-repeat bg-white border-[#cad8e3] border-solid border-[15px] pt-[23px] pr-[25px] pb-[34px] pl-[25px] overflow-hidden">
-                    <div>
-                        <span class="SecondSection_right_top_title block font-normal text-[22px] m-0 mb-[35px] p-0">자주찾는 서비스</span>
+                    <div class="flex items-center justify-between mb-[35px]">
+                        <span class="SecondSection_right_top_title block font-normal text-[22px]">자주찾는 서비스</span>
+                        <div class="flex">
+                            <img class="cursor-pointer" src="/img/SecondSectionServicePrevIcon.png" alt="">
+                            <img id="ServiceBtn" class="cursor-pointer mx-[10px]" src="/img/SecondSectionServiceStopIcon.png" alt="" onclick="">
+                            <img class="cursor-pointer" src="/img/SecondSectionServiceNextIcon.png" alt="">
+                        </div>
                     </div>
                     <div class="grid grid-cols-5 place-items-center m-0 p-0 text-center font-light">
                         <a href="" class="service_title_a">

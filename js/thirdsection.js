@@ -142,7 +142,7 @@ function collegeInfoChange() {
 		collegeInfo.classList.remove('opacity-0');
 
 		updatePageIndex();
-	}, 500); // 0.5초 후에 내용 변경
+	}, 450);
 }
 
 // 버튼 누르면 인덱스 조절해서 대학 내용 바꿈 (끝에서 다시 처음으로 갈 수 있게)

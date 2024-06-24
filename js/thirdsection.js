@@ -163,36 +163,17 @@ document.addEventListener('DOMContentLoaded', function () {
 	const upButton = document.getElementById('newsUpBtn');
 	const downButton = document.getElementById('newsDownBtn');
 
-	function smoothScroll(element, targetScroll, duration) {
-		const startScroll = element.scrollTop;
-		const distance = targetScroll - startScroll;
-		let startTime = null;
-
-		function animation(currentTime) {
-			if (startTime === null) startTime = currentTime;
-			const timeElapsed = currentTime - startTime;
-			const run = easeInOutCubic(timeElapsed, startScroll, distance, duration);
-			element.scrollTop = run;
-			if (timeElapsed < duration) requestAnimationFrame(animation);
-		}
-
-		function easeInOutCubic(t, b, c, d) {
-			t /= d / 2;
-			if (t < 1) return c / 2 * t * t * t + b;
-			t -= 2;
-			return c / 2 * (t * t * t + 2) + b;
-		}
-
-		requestAnimationFrame(animation);
-	}
-
 	upButton.addEventListener('click', function () {
-		const targetScroll = newsBox.scrollTop - 530;
-		smoothScroll(newsBox, targetScroll, 1000);
+		newsBox.scrollBy({
+			top: -550,
+			behavior: 'smooth'
+		});
 	});
 
 	downButton.addEventListener('click', function () {
-		const targetScroll = newsBox.scrollTop + 530;
-		smoothScroll(newsBox, targetScroll, 1000);
+		newsBox.scrollBy({
+			top: 550,
+			behavior: 'smooth'
+		});
 	});
 });

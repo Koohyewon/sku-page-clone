@@ -1,0 +1,32 @@
+.guide_button a img {
+  transition: transform 0.6s;
+}
+
+.guide_button a:hover img {
+  transform: rotateY(360deg);
+}
+
+.social-button {
+  transition: background-position 0.4s ease-in-out;
+}
+
+.social-button:hover {
+  background-position: bottom;
+  transition: background-position 0.4s ease-in-out;
+}
+
+.video_card {
+  transition: transform 0.3s;
+}
+
+.video_arrow {
+  opacity: 0;
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+}
+
+.video_card:hover .video_arrow {
+  transform: translate(17%, 0);
+  opacity: 1;
+}

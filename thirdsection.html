@@ -1,0 +1,980 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://webfontworld.github.io/SCoreDream/SCoreDream.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/thirdsection.css" />
+    <style>
+      body {
+        font-family: "Noto Sans KR";
+      }
+    </style>
+    <title>thirdSection</title>
+  </head>
+  <body>
+    <!-- 대학소개, 캠퍼스 가이드, SKU 뉴스 부분 (기존 'page3') -->
+    <div class="page3 h-130vh bg-[url('img/bgIntroduce.jpg')] p-5 flex">
+      <!-- 대학 소개 & 가이드 -->
+      <div class="w-4/6 pt-10 pb-10">
+        <!-- 대학 파트별 소개 -->
+        <div class="depart_introduction relative mb-36">
+          <div class="w-7/12 z-10">
+            <img
+              id="collegeImage"
+              src="img/globalManagement.jpg"
+              alt="대학 관련 이미지"
+              class="object-cover pb-5 h-96 w-auto relative top-[17px]"
+            />
+          </div>
+          <div
+            id="collegeContent"
+            class="introduce_write w-auto bg-[url('img/bgDepart.png')] bg-no-repeat absolute top-10 left-2/4 z-20 p-5"
+          >
+            <!-- 대학별 설명 -->
+            <div class="text-white p-5 font-light">
+              <div class="text-base mb-5">SKU INTRODUCTION</div>
+              <div
+                id="collegeName"
+                class="text-3xl mb-5 font-medium transition-opacity duration-500"
+              ></div>
+              <div
+                id="collegeInfo"
+                class="college_info flex flex-wrap max-w-sm text-clip overflow-hidden text-wrap line-clamp-3 transition-opacity duration-500"
+                style="display: -webkit-box; -webkit-box-orient: vertical"
+              ></div>
+            </div>
+            <div class="depart_list mb-[10%] h-24 overflow-y-auto">
+              <ul
+                id="departmentList"
+                class="grid grid-cols-2 gap-4 w-full transition-opacity duration-500"
+              ></ul>
+            </div>
+            <div class="flex absolute bottom-0 -left-14">
+              <button id="prevBtn" class="arrow-btn bg-slate-700 h-12 p-3">
+                <img
+                  src="https://www.sungkyul.ac.kr/sites/skukr/images/main/arrow-depart-prev.png"
+                  alt="prevArrow"
+                />
+              </button>
+              <button id="nextBtn" class="arrow-btn bg-slate-400 h-12 p-3">
+                <img
+                  src="https://www.sungkyul.ac.kr/sites/skukr/images/main/arrow-depart-next.png"
+                  alt="nextArrow"
+                />
+              </button>
+            </div>
+            <div
+              id="pageIndex"
+              class="text-4xl absolute bottom-0 right-0 text-white opacity-10 font-bold"
+            >
+              01
+            </div>
+          </div>
+        </div>
+
+        <!-- SKU 캠퍼스 가이드 -->
+        <div
+          class="skuGuide w-full max-h-full bg-[url('img/bgCampus-m.png')] bg-cover flex"
+        >
+          <div
+            class="text-white text-4xl font-medium p-10"
+            style="font-family: SCoreDream"
+          >
+            SKU <br />
+            캠퍼스 가이드
+          </div>
+          <div
+            class="guide_button flex justify-end w-[60%] ml-auto my-0 z-20 bottom-10 pr-3 relative bottom-5"
+          >
+            <a
+              href="https://www.sungkyul.ac.kr/skukr/261/subview.do"
+              class="guide_icon text-center bg-white border-4 border-white px-5 py-8 mx-5 flex flex-col items-center transition duration-300 hover:translate-y-[-20px] hover:border-4 hover:border-blue-500"
+            >
+              <img
+                src="img/mapicon.png"
+                alt="캠퍼스맵"
+                class="mb-5 w-24 h-16 max-h-full object-contain"
+              />
+              <div>캠퍼스맵</div>
+            </a>
+            <a
+              href="https://www.sungkyul.ac.kr/skukr/262/subview.do"
+              class="guide_icon text-center bg-white border-4 border-white px-5 py-8 mx-5 flex flex-col items-center transition duration-300 hover:translate-y-[-20px] hover:border-4 hover:border-blue-500"
+            >
+              <img
+                src="img/schoolicon.png"
+                alt="찾아오시는길"
+                class="mb-5 w-24 h-16 max-h-full object-contain"
+              />
+              <div>찾아오시는길</div>
+            </a>
+            <a
+              href="https://www.sungkyul.ac.kr/skukr/263/subview.do"
+              class="guide_icon text-center bg-white border-4 border-white px-5 py-8 mx-5 flex flex-col items-center transition duration-300 hover:translate-y-[-20px] hover:border-4 hover:border-blue-500"
+            >
+              <img
+                src="img/callicon.png"
+                alt="교내전화번호"
+                class="mb-5 w-24 h-16 max-h-full object-contain"
+              />
+              <div>교내전화번호</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SKU 뉴스 -->
+      <div class="skuNews w-2/6 h-full pl-10 ml-5">
+        <div
+          class="news_box text-3xl p-5 pb-0 mt-10"
+          style="background-color: rgba(255, 255, 255, 0.5)"
+        >
+          <strong> SKU NEWS </strong>
+          <div class="news_detail mt-5 max-h-[70vh] overflow-y-hidden">
+            <div class="news1 flex items-center justify-between p-1 mb-5">
+              <div class="w-4/5">
+                <div class="flex items-center text-center">
+                  <img
+                    src="https://www.sungkyul.ac.kr/Web-home/fnct/recentBbs/main_recent/images/bul-news.png"
+                    alt=""
+                    class="h-4 mb-2 mr-3"
+                  />
+                  <p class="news_Date text-base mb-2 text-gray-500">
+                    2024.06.19
+                  </p>
+                </div>
+                <div class="overflow-hidden max-w-[85%]">
+                  <a
+                    href="https://www.sungkyul.ac.kr/skukr/342/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NyUyRjM1MDk4JTJGYXJ0Y2xWaWV3LmRvJTNG"
+                    class="text-base truncate text-clip overflow-hidden whitespace-nowrap text-wrap hover:underline"
+                    style="
+                      display: -webkit-box;
+                      -webkit-line-clamp: 2;
+                      -webkit-box-orient: vertical;
+                    "
+                  >
+                    성결대-안양시기독교연합회, 기독교 글로벌 리더 양성 위한 업무
+                    협약 체결 및 장학금 기증
+                  </a>
+                </div>
+              </div>
+              <img
+                src="img/skunewslogo.png"
+                class="object-contain"
+                alt="Logo"
+              />
+            </div>
+            <div class="news2 flex items-center justify-between p-1 mb-5">
+              <div class="w-4/5">
+                <div class="flex items-center text-center">
+                  <img
+                    src="https://www.sungkyul.ac.kr/Web-home/fnct/recentBbs/main_recent/images/bul-news.png"
+                    alt=""
+                    class="h-4 mb-2 mr-3"
+                  />
+                  <p class="news_Date text-base mb-2 text-gray-500">
+                    2024.06.13
+                  </p>
+                </div>
+                <div class="overflow-hidden max-w-[85%]">
+                  <a
+                    href="https://www.sungkyul.ac.kr/skukr/342/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NyUyRjM1MDk4JTJGYXJ0Y2xWaWV3LmRvJTNG"
+                    class="text-base truncate text-clip overflow-hidden whitespace-nowrap text-wrap hover:underline"
+                    style="
+                      display: -webkit-box;
+                      -webkit-line-clamp: 2;
+                      -webkit-box-orient: vertical;
+                    "
+                  >
+                    성결대, 장애인 생태환경체험 진행
+                  </a>
+                </div>
+              </div>
+              <img
+                src="img/skunewslogo.png"
+                class="object-contain"
+                alt="Logo"
+              />
+            </div>
+            <div class="news3 flex items-center justify-between p-1 mb-5">
+              <div class="w-4/5">
+                <div class="flex items-center text-center">
+                  <img
+                    src="https://www.sungkyul.ac.kr/Web-home/fnct/recentBbs/main_recent/images/bul-news.png"
+                    alt=""
+                    class="h-4 mb-2 mr-3"
+                  />
+                  <p class="news_Date text-base mb-2 text-gray-500">
+                    2024.06.13
+                  </p>
+                </div>
+                <div class="overflow-hidden max-w-[85%]">
+                  <a
+                    href="https://www.sungkyul.ac.kr/skukr/342/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NyUyRjM1MDk4JTJGYXJ0Y2xWaWV3LmRvJTNG"
+                    class="text-base truncate text-clip overflow-hidden whitespace-nowrap text-wrap hover:underline"
+                    style="
+                      display: -webkit-box;
+                      -webkit-line-clamp: 2;
+                      -webkit-box-orient: vertical;
+                    "
+                  >
+                    성결대학교 안양중앙인정시장 비전 선포식 참여
+                  </a>
+                </div>
+              </div>
+              <img
+                src="img/skunewslogo.png"
+                class="object-contain"
+                alt="Logo"
+              />
+            </div>
+            <div class="news4 flex items-center justify-between p-1 mb-5">
+              <div class="w-4/5">
+                <div class="flex items-center text-center">
+                  <img
+                    src="https://www.sungkyul.ac.kr/Web-home/fnct/recentBbs/main_recent/images/bul-news.png"
+                    alt=""
+                    class="h-4 mb-2 mr-3"
+                  />
+                  <p class="news_Date text-base mb-2 text-gray-500">
+                    2024.06.12
+                  </p>
+                </div>
+                <div class="overflow-hidden max-w-[85%]">
+                  <a
+                    href="https://www.sungkyul.ac.kr/skukr/342/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NyUyRjM1MDk4JTJGYXJ0Y2xWaWV3LmRvJTNG"
+                    class="text-base truncate text-clip overflow-hidden whitespace-nowrap text-wrap hover:underline"
+                    style="
+                      display: -webkit-box;
+                      -webkit-line-clamp: 2;
+                      -webkit-box-orient: vertical;
+                    "
+                  >
+                    美 풀브라이트 AIEA 참가단, 성결대학교 방문
+                  </a>
+                </div>
+              </div>
+              <img
+                src="img/skunewslogo.png"
+                class="object-contain"
+                alt="Logo"
+              />
+            </div>
+            <div class="news5 flex items-center justify-between p-1 mb-5">
+              <div class="w-4/5">
+                <div class="flex items-center text-center">
+                  <img
+                    src="https://www.sungkyul.ac.kr/Web-home/fnct/recentBbs/main_recent/images/bul-news.png"
+                    alt=""
+                    class="h-4 mb-2 mr-3"
+                  />
+                  <p class="news_Date text-base mb-2 text-gray-500">
+                    2024.06.10
+                  </p>
+                </div>
+                <div class="overflow-hidden max-w-[85%]">
+                  <a
+                    href="https://www.sungkyul.ac.kr/skukr/342/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NyUyRjM1MDk4JTJGYXJ0Y2xWaWV3LmRvJTNG"
+                    class="text-base truncate text-clip overflow-hidden whitespace-nowrap text-wrap hover:underline"
+                    style="
+                      display: -webkit-box;
+                      -webkit-line-clamp: 2;
+                      -webkit-box-orient: vertical;
+                    "
+                  >
+                    영화영상전공 15학번 이윤석 &lt;ID_영길엄마&gt; 코리안시네마
+                    부문, 22학번 양선민 &lt;하나의 장례식과 둘의 졸업식&gt;
+                    한국단편경쟁 부문 선정 소식
+                  </a>
+                </div>
+              </div>
+              <img
+                src="img/skunewslogo.png"
+                class="object-contain"
+                alt="Logo"
+              />
+            </div>
+            <div class="news6 flex items-center justify-between p-1 mb-5">
+              <div class="w-4/5">
+                <div class="flex items-center text-center">
+                  <img
+                    src="https://www.sungkyul.ac.kr/Web-home/fnct/recentBbs/main_recent/images/bul-news.png"
+                    alt=""
+                    class="h-4 mb-2 mr-3"
+                  />
+                  <p class="news_Date text-base mb-2 text-gray-500">
+                    2024.06.10
+                  </p>
+                </div>
+                <div class="overflow-hidden max-w-[85%]">
+                  <a
+                    href="https://www.sungkyul.ac.kr/skukr/342/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NyUyRjM0OTgyJTJGYXJ0Y2xWaWV3LmRvJTNG"
+                    class="text-base truncate text-clip overflow-hidden whitespace-nowrap text-wrap hover:underline"
+                    style="
+                      display: -webkit-box;
+                      -webkit-line-clamp: 2;
+                      -webkit-box-orient: vertical;
+                    "
+                  >
+                    성결대, 경기도의회 위원들과 RISE사업 협력 강화, ‘제1회
+                    지역사회협력회의’ 성료
+                  </a>
+                </div>
+              </div>
+              <img
+                src="img/skunewslogo.png"
+                class="object-contain"
+                alt="Logo"
+              />
+            </div>
+            <div class="news7 flex items-center justify-between p-1 mb-5">
+              <div class="w-4/5">
+                <div class="flex items-center text-center">
+                  <img
+                    src="https://www.sungkyul.ac.kr/Web-home/fnct/recentBbs/main_recent/images/bul-news.png"
+                    alt=""
+                    class="h-4 mb-2 mr-3"
+                  />
+                  <p class="news_Date text-base mb-2 text-gray-500">
+                    2024.06.04
+                  </p>
+                </div>
+                <div class="overflow-hidden max-w-[85%]">
+                  <a
+                    href="https://www.sungkyul.ac.kr/skukr/342/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NyUyRjM0OTQ2JTJGYXJ0Y2xWaWV3LmRvJTNG"
+                    class="text-base truncate text-clip overflow-hidden whitespace-nowrap text-wrap hover:underline"
+                    style="
+                      display: -webkit-box;
+                      -webkit-line-clamp: 2;
+                      -webkit-box-orient: vertical;
+                    "
+                  >
+                    성결대학교 영화영상전공 04학번 윤혜렴 CJ ENM '2023
+                    오프닝(O'PENing)‘ <썸머, 러브머신 블루스> 미국
+                    휴스턴국제영화제 심사위원 특별상, 베스트 편집상 2관왕 수상
+                  </a>
+                </div>
+              </div>
+              <img
+                src="img/skunewslogo.png"
+                class="object-contain"
+                alt="Logo"
+              />
+            </div>
+            <div class="news8 flex items-center justify-between p-1 mb-5">
+              <div class="w-4/5">
+                <div class="flex items-center text-center">
+                  <img
+                    src="https://www.sungkyul.ac.kr/Web-home/fnct/recentBbs/main_recent/images/bul-news.png"
+                    alt=""
+                    class="h-4 mb-2 mr-3"
+                  />
+                  <p class="news_Date text-base mb-2 text-gray-500">
+                    2024.05.29
+                  </p>
+                </div>
+                <div class="overflow-hidden max-w-[85%]">
+                  <a
+                    href="https://www.sungkyul.ac.kr/skukr/342/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NyUyRjM0ODQzJTJGYXJ0Y2xWaWV3LmRvJTNG"
+                    class="text-base truncate text-clip overflow-hidden whitespace-nowrap text-wrap hover:underline"
+                    style="
+                      display: -webkit-box;
+                      -webkit-line-clamp: 2;
+                      -webkit-box-orient: vertical;
+                    "
+                  >
+                    성결대 글로벌물류학부, 데이터사이언스 논문 경진대회 성료
+                  </a>
+                </div>
+              </div>
+              <img
+                src="img/skunewslogo.png"
+                class="object-contain"
+                alt="Logo"
+              />
+            </div>
+            <div class="news9 flex items-center justify-between p-1 mb-5">
+              <div class="w-4/5">
+                <div class="flex items-center text-center">
+                  <img
+                    src="https://www.sungkyul.ac.kr/Web-home/fnct/recentBbs/main_recent/images/bul-news.png"
+                    alt=""
+                    class="h-4 mb-2 mr-3"
+                  />
+                  <p class="news_Date text-base mb-2 text-gray-500">
+                    2024.05.28
+                  </p>
+                </div>
+                <div class="overflow-hidden max-w-[85%]">
+                  <a
+                    href="https://www.sungkyul.ac.kr/skukr/342/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NyUyRjM0ODI4JTJGYXJ0Y2xWaWV3LmRvJTNG"
+                    class="text-base truncate text-clip overflow-hidden whitespace-nowrap text-wrap hover:underline"
+                    style="
+                      display: -webkit-box;
+                      -webkit-line-clamp: 2;
+                      -webkit-box-orient: vertical;
+                    "
+                  >
+                    성결대, 불법촬영 예방을 위한 민관경 합동 캠페인 및 캠퍼스
+                    폴리스(S.C.P.) 발대식 개최
+                  </a>
+                </div>
+              </div>
+              <img
+                src="img/skunewslogo.png"
+                class="object-contain"
+                alt="Logo"
+              />
+            </div>
+            <div class="news10 flex items-center justify-between p-1 mb-5">
+              <div class="w-4/5">
+                <div class="flex items-center text-center">
+                  <img
+                    src="https://www.sungkyul.ac.kr/Web-home/fnct/recentBbs/main_recent/images/bul-news.png"
+                    alt=""
+                    class="h-4 mb-2 mr-3"
+                  />
+                  <p class="news_Date text-base mb-2 text-gray-500">
+                    2024.05.23
+                  </p>
+                </div>
+                <div class="overflow-hidden max-w-[85%]">
+                  <a
+                    href="https://www.sungkyul.ac.kr/skukr/342/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NyUyRjM0Nzg4JTJGYXJ0Y2xWaWV3LmRvJTNG"
+                    class="text-base truncate text-clip overflow-hidden whitespace-nowrap text-wrap hover:underline"
+                    style="
+                      display: -webkit-box;
+                      -webkit-line-clamp: 2;
+                      -webkit-box-orient: vertical;
+                    "
+                  >
+                    성결대, 설립자 故 영암 김응조 목사 저작물 초판본 등 성결교회
+                    역사자료 기증식 진행
+                  </a>
+                </div>
+              </div>
+              <img
+                src="img/skunewslogo.png"
+                class="object-contain"
+                alt="Logo"
+              />
+            </div>
+            <div class="news11 flex items-center justify-between p-1 mb-5">
+              <div class="w-4/5">
+                <div class="flex items-center text-center">
+                  <img
+                    src="https://www.sungkyul.ac.kr/Web-home/fnct/recentBbs/main_recent/images/bul-news.png"
+                    alt=""
+                    class="h-4 mb-2 mr-3"
+                  />
+                  <p class="news_Date text-base mb-2 text-gray-500">
+                    2024.05.22
+                  </p>
+                </div>
+                <div class="overflow-hidden max-w-[85%]">
+                  <a
+                    href="https://www.sungkyul.ac.kr/skukr/342/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NyUyRjM0Nzg1JTJGYXJ0Y2xWaWV3LmRvJTNG"
+                    class="text-base truncate text-clip overflow-hidden whitespace-nowrap text-wrap hover:underline"
+                    style="
+                      display: -webkit-box;
+                      -webkit-line-clamp: 2;
+                      -webkit-box-orient: vertical;
+                    "
+                  >
+                    성결대학교 ‘SUCCESS로 가는길, 성결 FAIR 2024’ 개최
+                  </a>
+                </div>
+              </div>
+              <img
+                src="img/skunewslogo.png"
+                class="object-contain"
+                alt="Logo"
+              />
+            </div>
+            <div class="news12 flex items-center justify-between p-1 mb-5">
+              <div class="w-4/5">
+                <div class="flex items-center text-center">
+                  <img
+                    src="https://www.sungkyul.ac.kr/Web-home/fnct/recentBbs/main_recent/images/bul-news.png"
+                    alt=""
+                    class="h-4 mb-2 mr-3"
+                  />
+                  <p class="news_Date text-base mb-2 text-gray-500">
+                    2024.05.20
+                  </p>
+                </div>
+                <div class="overflow-hidden max-w-[85%]">
+                  <a
+                    href="https://www.sungkyul.ac.kr/skukr/342/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NyUyRjM0NzU0JTJGYXJ0Y2xWaWV3LmRvJTNG"
+                    class="text-base truncate text-clip overflow-hidden whitespace-nowrap text-wrap hover:underline"
+                    style="
+                      display: -webkit-box;
+                      -webkit-line-clamp: 2;
+                      -webkit-box-orient: vertical;
+                    "
+                  >
+                    2024학년도 재학생 만족도 조사 운영 안내
+                  </a>
+                </div>
+              </div>
+              <img
+                src="img/skunewslogo.png"
+                class="object-contain"
+                alt="Logo"
+              />
+            </div>
+            <div class="news13 flex items-center justify-between p-1 mb-5">
+              <div class="w-4/5">
+                <div class="flex items-center text-center">
+                  <img
+                    src="https://www.sungkyul.ac.kr/Web-home/fnct/recentBbs/main_recent/images/bul-news.png"
+                    alt=""
+                    class="h-4 mb-2 mr-3"
+                  />
+                  <p class="news_Date text-base mb-2 text-gray-500">
+                    2024.05.20
+                  </p>
+                </div>
+                <div class="overflow-hidden max-w-[85%]">
+                  <a
+                    href="https://www.sungkyul.ac.kr/skukr/342/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NyUyRjM0NzQ5JTJGYXJ0Y2xWaWV3LmRvJTNG"
+                    class="text-base truncate text-clip overflow-hidden whitespace-nowrap text-wrap hover:underline"
+                    style="
+                      display: -webkit-box;
+                      -webkit-line-clamp: 2;
+                      -webkit-box-orient: vertical;
+                    "
+                  >
+                    미디어소프트웨어학과 졸업생 편진범, 홍윤서, 선우희은,
+                    예비창업패키지 사업 최종 선정
+                  </a>
+                </div>
+              </div>
+              <img
+                src="img/skunewslogo.png"
+                class="object-contain"
+                alt="Logo"
+              />
+            </div>
+            <div class="news14 flex items-center justify-between p-1 mb-5">
+              <div class="w-4/5">
+                <div class="flex items-center text-center">
+                  <img
+                    src="https://www.sungkyul.ac.kr/Web-home/fnct/recentBbs/main_recent/images/bul-news.png"
+                    alt=""
+                    class="h-4 mb-2 mr-3"
+                  />
+                  <p class="news_Date text-base mb-2 text-gray-500">
+                    2024.05.09
+                  </p>
+                </div>
+                <div class="overflow-hidden max-w-[85%]">
+                  <a
+                    href="https://www.sungkyul.ac.kr/skukr/342/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NyUyRjM0Njc4JTJGYXJ0Y2xWaWV3LmRvJTNG"
+                    class="text-base truncate text-clip overflow-hidden whitespace-nowrap text-wrap hover:underline"
+                    style="
+                      display: -webkit-box;
+                      -webkit-line-clamp: 2;
+                      -webkit-box-orient: vertical;
+                    "
+                  >
+                    성결대 지역사회협력단, 충훈고 학생들 대상으로 학부(과)
+                    진로체험 진행
+                  </a>
+                </div>
+              </div>
+              <img
+                src="img/skunewslogo.png"
+                class="object-contain"
+                alt="Logo"
+              />
+            </div>
+            <div class="news15 flex items-center justify-between p-1 mb-5">
+              <div class="w-4/5">
+                <div class="flex items-center text-center">
+                  <img
+                    src="https://www.sungkyul.ac.kr/Web-home/fnct/recentBbs/main_recent/images/bul-news.png"
+                    alt=""
+                    class="h-4 mb-2 mr-3"
+                  />
+                  <p class="news_Date text-base mb-2 text-gray-500">
+                    2024.05.08
+                  </p>
+                </div>
+                <div class="overflow-hidden max-w-[85%]">
+                  <a
+                    href="https://www.sungkyul.ac.kr/skukr/342/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NyUyRjM0NjYxJTJGYXJ0Y2xWaWV3LmRvJTNG"
+                    class="text-base truncate text-clip overflow-hidden whitespace-nowrap text-wrap hover:underline"
+                    style="
+                      display: -webkit-box;
+                      -webkit-line-clamp: 2;
+                      -webkit-box-orient: vertical;
+                    "
+                  >
+                    성결대, 기부자 박근주 회장에게 감사패 증정 및 기부자 이름 딴
+                    강의실 명명식 개최
+                  </a>
+                </div>
+              </div>
+              <img
+                src="img/skunewslogo.png"
+                class="object-contain"
+                alt="Logo"
+              />
+            </div>
+            <div class="news16 flex items-center justify-between p-1 mb-5">
+              <div class="w-4/5">
+                <div class="flex items-center text-center">
+                  <img
+                    src="https://www.sungkyul.ac.kr/Web-home/fnct/recentBbs/main_recent/images/bul-news.png"
+                    alt=""
+                    class="h-4 mb-2 mr-3"
+                  />
+                  <p class="news_Date text-base mb-2 text-gray-500">
+                    2024.05.07
+                  </p>
+                </div>
+                <div class="overflow-hidden max-w-[85%]">
+                  <a
+                    href="https://www.sungkyul.ac.kr/skukr/342/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NyUyRjM0NjQ5JTJGYXJ0Y2xWaWV3LmRvJTNG"
+                    class="text-base truncate text-clip overflow-hidden whitespace-nowrap text-wrap hover:underline"
+                    style="
+                      display: -webkit-box;
+                      -webkit-line-clamp: 2;
+                      -webkit-box-orient: vertical;
+                    "
+                  >
+                    성결대학교, 2024학년도 융합학부 전공 설명회 개최
+                  </a>
+                </div>
+              </div>
+              <img
+                src="img/skunewslogo.png"
+                class="object-contain"
+                alt="Logo"
+              />
+            </div>
+            <div class="news17 flex items-center justify-between p-1 mb-5">
+              <div class="w-4/5">
+                <div class="flex items-center text-center">
+                  <img
+                    src="https://www.sungkyul.ac.kr/Web-home/fnct/recentBbs/main_recent/images/bul-news.png"
+                    alt=""
+                    class="h-4 mb-2 mr-3"
+                  />
+                  <p class="news_Date text-base mb-2 text-gray-500">
+                    2024.05.07
+                  </p>
+                </div>
+                <div class="overflow-hidden max-w-[85%]">
+                  <a
+                    href="https://www.sungkyul.ac.kr/skukr/342/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NyUyRjM0NjQ3JTJGYXJ0Y2xWaWV3LmRvJTNG"
+                    class="text-base truncate text-clip overflow-hidden whitespace-nowrap text-wrap hover:underline"
+                    style="
+                      display: -webkit-box;
+                      -webkit-line-clamp: 2;
+                      -webkit-box-orient: vertical;
+                    "
+                  >
+                    연기예술학과 나진환 교수 연출, &lt;카라마조프가의 형제들:
+                    이반과 스메르자코프&gt; 5월 공연
+                  </a>
+                </div>
+              </div>
+              <img
+                src="img/skunewslogo.png"
+                class="object-contain"
+                alt="Logo"
+              />
+            </div>
+            <div class="news18 flex items-center justify-between p-1 mb-5">
+              <div class="w-4/5">
+                <div class="flex items-center text-center">
+                  <img
+                    src="https://www.sungkyul.ac.kr/Web-home/fnct/recentBbs/main_recent/images/bul-news.png"
+                    alt=""
+                    class="h-4 mb-2 mr-3"
+                  />
+                  <p class="news_Date text-base mb-2 text-gray-500">
+                    2024.05.01
+                  </p>
+                </div>
+                <div class="overflow-hidden max-w-[85%]">
+                  <a
+                    href="https://www.sungkyul.ac.kr/skukr/342/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NyUyRjM0NjA4JTJGYXJ0Y2xWaWV3LmRvJTNG"
+                    class="text-base truncate text-clip overflow-hidden whitespace-nowrap text-wrap hover:underline"
+                    style="
+                      display: -webkit-box;
+                      -webkit-line-clamp: 2;
+                      -webkit-box-orient: vertical;
+                    "
+                  >
+                    성결대 관광개발학과, 더블트리 바이 힐튼 호텔과 MOU 체결
+                  </a>
+                </div>
+              </div>
+              <img
+                src="img/skunewslogo.png"
+                class="object-contain"
+                alt="Logo"
+              />
+            </div>
+            <div class="news19 flex items-center justify-between p-1 mb-5">
+              <div class="w-4/5">
+                <div class="flex items-center text-center">
+                  <img
+                    src="https://www.sungkyul.ac.kr/Web-home/fnct/recentBbs/main_recent/images/bul-news.png"
+                    alt=""
+                    class="h-4 mb-2 mr-3"
+                  />
+                  <p class="news_Date text-base mb-2 text-gray-500">
+                    2024.04.29
+                  </p>
+                </div>
+                <div class="overflow-hidden max-w-[85%]">
+                  <a
+                    href="https://www.sungkyul.ac.kr/skukr/342/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NyUyRjM0NTg5JTJGYXJ0Y2xWaWV3LmRvJTNG"
+                    class="text-base truncate text-clip overflow-hidden whitespace-nowrap text-wrap hover:underline"
+                    style="
+                      display: -webkit-box;
+                      -webkit-line-clamp: 2;
+                      -webkit-box-orient: vertical;
+                    "
+                  >
+                    성결대 ‘2024 지역기반형 유아교육·보육 혁신 지원 사업’협약
+                    체결
+                  </a>
+                </div>
+              </div>
+              <img
+                src="img/skunewslogo.png"
+                class="object-contain"
+                alt="Logo"
+              />
+            </div>
+            <div class="news20 flex items-center justify-between p-1 mb-5">
+              <div class="w-4/5">
+                <div class="flex items-center text-center">
+                  <img
+                    src="https://www.sungkyul.ac.kr/Web-home/fnct/recentBbs/main_recent/images/bul-news.png"
+                    alt=""
+                    class="h-4 mb-2 mr-3"
+                  />
+                  <p class="news_Date text-base mb-2 text-gray-500">
+                    2024.04.24
+                  </p>
+                </div>
+                <div class="overflow-hidden max-w-[85%]">
+                  <a
+                    href="https://www.sungkyul.ac.kr/skukr/342/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NyUyRjM0NTYxJTJGYXJ0Y2xWaWV3LmRvJTNG"
+                    class="text-base truncate text-clip overflow-hidden whitespace-nowrap text-wrap hover:underline"
+                    style="
+                      display: -webkit-box;
+                      -webkit-line-clamp: 2;
+                      -webkit-box-orient: vertical;
+                    "
+                  >
+                    성결대 김상식 총장, 비타민 음료&초코바 전달로 중간고사
+                    응원•격려해
+                  </a>
+                </div>
+              </div>
+              <img
+                src="img/skunewslogo.png"
+                class="object-contain"
+                alt="Logo"
+              />
+            </div>
+          </div>
+          <div
+            class="flex relative bottom-0 left-[80%] transition duration-500"
+          >
+            <button
+              id="newsUpBtn"
+              class="flex bg-neutral-700 h-12 w-12 p-3 items-center justify-center"
+            >
+              <img
+                src="https://www.sungkyul.ac.kr/Web-home/fnct/recentBbs/main_recent/images/ico-news-prev.png"
+                alt="news up Arrow"
+              />
+            </button>
+            <button
+              id="newsDownBtn"
+              class="flex bg-white h-12 w-12 p-3 items-center justify-center"
+            >
+              <img
+                src="https://www.sungkyul.ac.kr/Web-home/fnct/recentBbs/main_recent/images/ico-news-next-on.png"
+                alt="news down Arrow"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SKU COMMUNICATION 부분 -->
+    <div
+      class="sku_community h-[135vh] bg-[url('img/bgSNS.jpg')] bg-contain px-5 pb-10"
+    >
+      <div>
+        <div class="pt-32">
+          <p class="text-4xl font-thin">창조적이고 혁신적인 미래를 준비하는</p>
+          <div class="flex">
+            <p class="text-4xl font-medium flex text-nowrap">
+              세상과 같이하는 가치로운 성결의 힘 SKU Communication
+            </p>
+            <div
+              class="justify-end after:block after:w-[500px] after:h-[3px] after:bg-black after:mt-2 after:ml-5 relative top-4 flex"
+            ></div>
+          </div>
+          <div class="flex justify-end translate-y-[-35px]">
+            <a
+              href="https://www.skunewspaper.co.kr/"
+              class="w-48 h-10 bg-blue-500 rounded-full text-white text-center content-center mx-3"
+            >
+              #성결대학보 바로가기
+            </a>
+            <a
+              href="https://www.skunews.co.kr/"
+              class="w-48 h-10 bg-blue-500 rounded-full text-white text-center content-center"
+            >
+              #SKU NEWS 바로가기
+            </a>
+          </div>
+          <!-- SNS 아이콘 부분 -->
+          <div class="flex py-5">
+            <a
+              href="https://www.youtube.com/channel/UCs-iuRQW6V6qlrYg8bs4GjQ"
+              class="social-button bg-[url('img/youtubeButton.png')] bg-no-repeat w-14 h-14 bg-bottom m-2"
+            >
+            </a>
+            <a
+              href="https://blog.naver.com/insidesku"
+              class="social-button bg-[url('img/blogButton.png')] bg-no-repeat w-14 h-14 bg-top m-2"
+            >
+            </a>
+            <a
+              href="https://www.instagram.com/sungkyul_uni/"
+              class="social-button bg-[url('img/instagramButton.png')] bg-no-repeat w-14 h-14 bg-top m-2"
+            >
+            </a>
+            <a
+              href="https://www.facebook.com/insidesku/"
+              class="social-button bg-[url('img/facebookButton.png')] bg-no-repeat w-14 h-14 bg-top m-2"
+            >
+            </a>
+          </div>
+          <!-- 영상 부분 -->
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-5">
+            <a
+              href="https://www.youtube.com/watch?v=qQU7cquSmGU"
+              class="video_card"
+            >
+              <div
+                class="bg-gray-500 text-white p-10 text-center h-60 bg-[url('https://i.ytimg.com/vi/qQU7cquSmGU/mqdefault.jpg')] bg-no-repeat bg-cover bg-center"
+              ></div>
+              <div
+                class="w-72 h-32 bg-white mx-auto relative -top-10 p-5 text-center drop-shadow-xl z-20"
+              >
+                <img
+                  src="https://www.sungkyul.ac.kr/sites/skukr/images/main/ico-youtue.png"
+                  alt="유튜브 로고"
+                  class="mx-auto mt-3"
+                />
+                <p class="text-lg">성결대학교 홍보 영상</p>
+              </div>
+              <div
+                class="video_arrow relative -top-[43%] left-[75%] z-30 h-16 w-16 p-3 bg-[#2247a6] bg-[url('https://www.sungkyul.ac.kr/sites/skukr/images/main/arrow-depart-next.png')] bg-no-repeat bg-center"
+              ></div>
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=850_xNopPMQ"
+              class="video_card"
+            >
+              <div
+                class="bg-gray-500 text-white p-10 text-center h-60 bg-[url('https://i.ytimg.com/vi/850_xNopPMQ/mqdefault.jpg')] bg-no-repeat bg-cover bg-center"
+              ></div>
+              <div
+                class="w-72 h-32 bg-white mx-auto relative -top-10 p-5 text-center drop-shadow-xl"
+              >
+                <img
+                  src="https://www.sungkyul.ac.kr/sites/skukr/images/main/ico-youtue.png"
+                  alt="유튜브 로고"
+                  class="mx-auto mt-3"
+                />
+                <p class="text-lg">성결대학교 XR센터 소개 영상</p>
+              </div>
+              <div
+                class="video_arrow relative -top-[43%] left-[75%] z-30 h-16 w-16 p-3 bg-[#2247a6] bg-[url('https://www.sungkyul.ac.kr/sites/skukr/images/main/arrow-depart-next.png')] bg-no-repeat bg-center"
+              ></div>
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=4ZTMx0UxOFI"
+              class="video_card"
+            >
+              <div
+                class="bg-gray-500 text-white p-10 text-center h-60 bg-[url('https://i.ytimg.com/vi/4ZTMx0UxOFI/mqdefault.jpg')] bg-no-repeat bg-cover bg-center"
+              ></div>
+              <div
+                class="w-72 h-32 bg-white mx-auto relative -top-10 p-5 text-center drop-shadow-xl"
+              >
+                <img
+                  src="https://www.sungkyul.ac.kr/sites/skukr/images/main/ico-youtue.png"
+                  alt="유튜브 로고"
+                  class="mx-auto mt-3"
+                />
+                <p class="text-lg">성결대 외국인 유학생 한국어 과정</p>
+              </div>
+              <div
+                class="video_arrow relative -top-[43%] left-[75%] z-30 h-16 w-16 p-3 bg-[#2247a6] bg-[url('https://www.sungkyul.ac.kr/sites/skukr/images/main/arrow-depart-next.png')] bg-no-repeat bg-center"
+              ></div>
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=CJ8_nYczlm0"
+              class="video_card"
+            >
+              <div
+                class="bg-gray-500 text-white p-10 text-center h-60 bg-[url('https://i.ytimg.com/vi/CJ8_nYczlm0/mqdefault.jpg')] bg-no-repeat bg-cover bg-center"
+              ></div>
+              <div
+                class="w-72 h-32 bg-white mx-auto relative -top-10 p-5 text-center drop-shadow-xl"
+              >
+                <img
+                  src="https://www.sungkyul.ac.kr/sites/skukr/images/main/ico-youtue.png"
+                  alt="유튜브 로고"
+                  class="mx-auto mt-3"
+                />
+                <p class="text-lg">성결대학교 학과 소개 영상</p>
+              </div>
+              <div
+                class="video_arrow relative -top-[43%] left-[75%] z-30 h-16 w-16 p-3 bg-[#2247a6] bg-[url('https://www.sungkyul.ac.kr/sites/skukr/images/main/arrow-depart-next.png')] bg-no-repeat bg-center"
+              ></div>
+            </a>
+          </div>
+          <!-- 바로가기 배너 부분 -->
+          <div class="flex items-center absolute left-[30%] w-[40%] pb-24">
+            <a href="https://www.skunewspaper.co.kr/" class="mr-5">
+              <img src="img/schoolnewsButton.png" alt="성결대학보 바로가기" />
+            </a>
+            <a href="https://www.skunews.co.kr/">
+              <img src="img/engnewsButton.png" alt="학보 영자신문 바로가기" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/thirdsection.js"></script>
+  </body>
+</html>

@@ -3,23 +3,484 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>성결대학교 대표 국문</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/firstSection.js" defer></script>
+    <script src="/js/SecondSection.js" defer></script>
+    <script src="/js/SecondSectionSchedule.js" defer></script>
+    <script src="/js/SecondSectionSchedule2.js" defer></script>
+    <script src="/js/AboutSKU.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/Sidebar.js" defer></script>
+    <script src="js/thirdsection.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
       rel="stylesheet" />
-    <link
-      href="https://webfontworld.github.io/SCoreDream/SCoreDream.css"
-      rel="stylesheet" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/firstSection.css" />
+    <link rel="stylesheet" href="./css/SecondSection.css" />
     <link rel="stylesheet" href="css/thirdsection.css" />
-    <style>
-      body {
-        font-family: "Noto Sans KR";
-      }
-    </style>
   </head>
-  <body>
+
+  <body id="TopGo" class="Noto w-full h-screen m-0 p-0 overflow-x-hidden">
+    <!--Hyewon-->
+    <!-- firstSection container -->
+    <div class="w-full h-full pb-[3px]">
+      <!--firstSection 영상 background-->
+      <div class="h-screen w-full absolute top-0 left-0 overflow-hidden z-[-1]">
+        <video
+          class="h-full w-full object-cover"
+          autoplay
+          muted
+          playsinline
+          loop
+          data-keepplaying>
+          <source src="img/firstSection_video.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <!--firstSection top-->
+      <div class="h-10 w-full bg-[#003956] flex justify-between">
+        <div class="ml-5 flex items-center font-[330]">
+          <a
+            href="#"
+            class="h-10 w-[120px] bg-[#295CA4] text-center text-white leading-10 no-underline"
+            >WEBMAIL</a
+          >
+          <a
+            href="#"
+            class="h-10 w-[120px] bg-[#C71514] text-center text-white leading-10 no-underline"
+            >LOGIN</a
+          >
+          <a
+            href="#"
+            class="h-10 w-[120px] bg-[#676767] text-center text-white leading-10 no-underline"
+            >PORTAL</a
+          >
+        </div>
+        <!-- global_lang -->
+        <div class="mr-5">
+          <!-- top 우측의 KOR 버튼 -->
+          <button
+            id="languageBtn"
+            class="h-10 flex items-center p-0 bg-[#003956] text-white border-none cursor-pointer">
+            <img src="img/global_icon.png" />
+            <p id="kor" class="ml-2.5 mr-[17px] text-sm font-medium">KOR</p>
+            <img src="img/arrow_icon.png" />
+          </button>
+
+          <!-- KOR버튼을 클릭하면 language list 등장 -->
+          <!-- language_list가 nav에 가려지는 걸 막기 위해 relative & z-index 적용 -->
+          <div
+            class="language_list bg-[#003956] relative z-10 border border-[#072737] text-center hidden transition-all duration-[400ms] max-h-0 overflow-hidden">
+            <ul
+              class="m-0 p-0 list-none divide-y-[1px] divide-solid divide-[#072737] text-white">
+              <li class="py-[5px] hover:bg-[#005B89]">
+                <a
+                  href="https://www.sungkyul.ac.kr/sites/skueng/index..do"
+                  target="_blank"
+                  >ENG</a
+                >
+              </li>
+              <li class="py-[5px] hover:bg-[#005B89]">
+                <a
+                  href="https://www.sungkyul.ac.kr/sites/skujpn/index..do"
+                  target="_blank"
+                  >JPN</a
+                >
+              </li>
+              <li class="py-[5px] hover:bg-[#005B89]">
+                <a
+                  href="https://www.sungkyul.ac.kr/sites/skuchn/index..do"
+                  target="_blank"
+                  >CHN</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!--firstSection nav-->
+      <!-- nav에 language_list가 가려지는 걸 막기 위해 relative & z-index 적용 -->
+      <div
+        class="nav h-[110px] w-full flex justify-between items-center relative z-0 bg-black/[.2] border-white/[.15] border-b text-white transition duration-300 hover:bg-white hover:text-black">
+        <!-- 최대한 이미지는 svg로 해보기 /일단 완성 하고 로고 변경해보기 -->
+
+        <!-- logo -->
+        <div class="ml-5">
+          <a href="/firstSection.html">
+            <img src="img/logo_white.png" class="logo-img" />
+          </a>
+        </div>
+
+        <!-- nav contents -->
+        <div class="mr-5 flex flex-1 justify-between items-center">
+          <div
+            class="text-xl font-medium flex flex-1 items-center justify-between pl-[140px] pr-[12%]">
+            <!-- 성결소개 -->
+            <div class="group block cursor-pointer">
+              <a
+                href="https://www.sungkyul.ac.kr/skukr/233/subview.do"
+                class="py-[40px] relative">
+                성결소개
+                <span
+                  class="absolute left-0 right-0 bottom-7 h-[4px] bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+                <span
+                  class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-2.5 w-[6px] h-[6px] rounded-full bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+              </a>
+
+              <!--nav 목록/성결소개-->
+              <div
+                id="submenu-sungkyul"
+                class="submenu absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:max-h-screen group-hover:opacity-100 group-hover:pointer-events-auto">
+                <div
+                  class="px-[70px] py-12 grid grid-cols-5 gap-16 font-normal text-lg"
+                  id="submenu-content-sungkyul">
+                  <!-- 세부목록은 js로 처리 -->
+                </div>
+              </div>
+            </div>
+
+            <!-- 대학/대학원 -->
+            <div class="group inline cursor-pointer">
+              <a
+                href="https://www.sungkyul.ac.kr/skukr/487/subview.do"
+                class="py-[40px] relative">
+                대학/대학원
+                <span
+                  class="absolute left-0 right-0 bottom-7 h-[4px] bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+                <span
+                  class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-2.5 w-[6px] h-[6px] rounded-full bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+              </a>
+              <div
+                id="submenu-college"
+                class="submenu absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:max-h-screen group-hover:opacity-100 group-hover:pointer-events-auto">
+                <div
+                  class="px-[70px] py-12 grid grid-cols-5 gap-16 font-normal text-lg"
+                  id="submenu-content-college">
+                  <!-- 세부목록은 js로 처리 -->
+                </div>
+              </div>
+            </div>
+
+            <!-- 입학안내 -->
+            <div class="group inline cursor-pointer">
+              <a
+                href="https://www.sungkyul.ac.kr/ipsi/index.do"
+                class="py-[40px] relative">
+                입학안내
+                <span
+                  class="absolute left-0 right-0 bottom-7 h-[4px] bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+                <span
+                  class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-2.5 w-[6px] h-[6px] rounded-full bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+              </a>
+              <div
+                id="submenu-admission"
+                class="submenu absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:max-h-screen group-hover:opacity-100 group-hover:pointer-events-auto">
+                <div
+                  class="px-[70px] py-12 grid grid-cols-5 gap-16 font-normal text-lg"
+                  id="submenu-content-admission">
+                  <!-- 세부목록은 js로 처리 -->
+                </div>
+              </div>
+            </div>
+
+            <!-- 대학생활 -->
+            <div class="group inline cursor-pointer">
+              <a
+                href="https://www.sungkyul.ac.kr/skukr/640/subview.do"
+                class="py-[40px] relative">
+                대학생활
+                <span
+                  class="absolute left-0 right-0 bottom-7 h-[4px] bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+                <span
+                  class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-2.5 w-[6px] h-[6px] rounded-full bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+              </a>
+              <div
+                id="submenu-campuslife"
+                class="submenu absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:max-h-screen group-hover:opacity-100 group-hover:pointer-events-auto">
+                <div
+                  class="px-[70px] py-12 grid grid-cols-5 gap-16 font-normal text-lg"
+                  id="submenu-content-campuslife">
+                  <!-- 세부목록은 js로 처리 -->
+                </div>
+              </div>
+            </div>
+
+            <!-- 서비스 -->
+            <div class="group inline cursor-pointer">
+              <a
+                href="https://www.sungkyul.ac.kr/skukr/313/subview.do"
+                class="py-[40px] relative">
+                서비스
+                <span
+                  class="absolute left-0 right-0 bottom-7 h-[4px] bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+                <span
+                  class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-2.5 w-[6px] h-[6px] rounded-full bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+              </a>
+              <div
+                id="submenu-service"
+                class="submenu absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:max-h-screen group-hover:opacity-100 group-hover:pointer-events-auto">
+                <div
+                  class="px-[70px] py-12 grid grid-cols-5 gap-16 font-normal text-lg"
+                  id="submenu-content-service">
+                  <!-- 세부목록은 js로 처리 -->
+                </div>
+              </div>
+            </div>
+
+            <!-- 성결광장 -->
+            <div class="group inline cursor-pointer">
+              <a
+                href="https://www.sungkyul.ac.kr/skukr/342/subview.do"
+                class="py-[40px] relative">
+                성결광장
+                <span
+                  class="absolute left-0 right-0 bottom-7 h-[4px] bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+                <span
+                  class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-2.5 w-[6px] h-[6px] rounded-full bg-[#295CA4] opacity-0 group-hover:opacity-100"></span>
+              </a>
+              <div
+                id="submenu-square"
+                class="submenu absolute left-0 top-full w-full bg-[#EBF2FC]/[.96] text-black shadow-lg transition duration-[400ms] opacity-0 pointer-events-none group-hover:max-h-screen group-hover:opacity-100 group-hover:pointer-events-auto">
+                <div
+                  class="px-[70px] py-12 grid grid-cols-5 gap-16 font-normal text-lg"
+                  id="submenu-content-square">
+                  <!-- 세부목록은 js로 처리 -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex">
+            <div class="mr-[90px]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="25"
+                height="25"
+                viewBox="0,0,256,256">
+                <g
+                  fill="#ffffff"
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(5.12,5.12)">
+                    <path
+                      d="M21,3c-9.39844,0 -17,7.60156 -17,17c0,9.39844 7.60156,17 17,17c3.35547,0 6.46094,-0.98437 9.09375,-2.65625l12.28125,12.28125l4.25,-4.25l-12.125,-12.09375c2.17969,-2.85937 3.5,-6.40234 3.5,-10.28125c0,-9.39844 -7.60156,-17 -17,-17zM21,7c7.19922,0 13,5.80078 13,13c0,7.19922 -5.80078,13 -13,13c-7.19922,0 -13,-5.80078 -13,-13c0,-7.19922 5.80078,-13 13,-13z"></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div>메뉴</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Eunah-->
+    <div class="relative z-10">
+      <div id="sideMenu" class="sideMenu bg-[#295ca4] text-white py-[35px]">
+        <button
+          id="toggleButton"
+          class="toggleButton cursor-pointer flex flex-col items-center justify-center Noto font-medium text-[16px] top-[36%]">
+          <span class="pb-[13px]">OPEN</span>
+          <img id="toggleImage" src="/img/SideOpenArrow.png" alt="arrow" />
+        </button>
+        <ul class="Noto flex flex-col items-center text-[16px] font-normal">
+          <a href="" class="flex flex-col items-center py-[25px]">
+            <img
+              class="relative mb-[8px]"
+              src="/img/SideBarPOPUPIcon.png"
+              alt="" />
+            <div
+              class="absolute w-[27px] h-[27px] bg-[#c71514] rounded-[100px] top-[70px] right-[18px] text-center">
+              7
+            </div>
+            POPUP
+          </a>
+          <a href="" class="flex flex-col items-center py-[25px]">
+            <img class="mb-[8px]" src="/img/SideBarQUICKIcon.png" alt="" />
+            QUICK
+          </a>
+          <a href="" class="flex flex-col items-center py-[25px]">
+            <img class="mb-[8px]" src="/img/SideBarServiceIcon.png" alt="" />
+            비대면 서비스
+          </a>
+        </ul>
+        <div>
+          <div>
+            <button></button>
+            <div class></div>
+          </div>
+        </div>
+        <a class="flex justify-center" href="#TopGo">
+          <div
+            class="flex items-center justify-center w-[51px] h-[51px] rounded-[100px] border border-solid border-[1px] rder-[rgba(255, 255, 255, .25)]">
+            <img src="/img/SideBarGotoIcon.png" alt="" />
+          </div>
+        </a>
+      </div>
+    </div>
+    <div
+      class="relative w-full h-auto grid lg:grid-cols-2 grid-cols-1 bg-[url('./img/SecondSectionBG.jpg')] bg-cover py-[70px] px-[30px] z-0">
+      <!--SecondSection_left: 두번째 왼쪽-->
+      <div class="grid-rows-2 lg:pr-[30px] pr-0">
+        <!--left_top: 왼쪽 위-->
+        <div class="m-0">
+          <div
+            class="grid grid-cols-10 relative text-[white] text-[16px] font-normal text-center bg-[#003956] h-[50px] z-0">
+            <button id="Schedulebtn1" class="Schedulebtn" autofocus>
+              학사
+            </button>
+            <button id="Schedulebtn2" class="Schedulebtn">새소식</button>
+            <button id="Schedulebtn3" class="Schedulebtn">장학/등록</button>
+            <button id="Schedulebtn4" class="Schedulebtn">입학</button>
+            <button id="Schedulebtn5" class="Schedulebtn">취업</button>
+            <button id="Schedulebtn6" class="Schedulebtn">학생</button>
+            <button id="Schedulebtn7" class="Schedulebtn">글로벌</button>
+            <button id="Schedulebtn8" class="Schedulebtn">일반</button>
+            <button id="Schedulebtn9" class="Schedulebtn">비교과</button>
+            <a
+              class="absolute top-0 right-0 w-[50px] h-[50px]"
+              href="https://www.sungkyul.ac.kr/skukr/343/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NiUyRmFydGNsTGlzdC5kbyUzRg%3D%3D">
+              <div
+                class="flex justify-center items-center w-[50px] h-[50px] float-right m-0 p-0 bg-[#295CA4]">
+                <img src="./img/SecondSectionPlusIcon.png" alt="" />
+              </div>
+            </a>
+          </div>
+          <div class="bg-white">
+            <ul
+              class="SecondScheduleSection grid grid-rows-5 place-items-center">
+              <!--성결대학교 일정 js로 렌더링-->
+            </ul>
+          </div>
+        </div>
+        <!-- 학사일정 -->
+        <div class="mt-[30px] lg:mt-0 pt-0 lg:pt-[55px]">
+          <div
+            class="h-[250.6px] box-border bg-[url('./img/SecondSectionScheduleBg.png')] bg-cover px-[35px] pt-[25px] pb-0">
+            <div class="flex flex-row items-center justify-between mb-[28px]">
+              <div class="flex flex-row items-center">
+                <span class="text-[22px] text-white"> 학사일정 </span>
+                <div
+                  class="h-[1px] w-[77px] border-white border-solid border-[1px] ml-[30px]"></div>
+              </div>
+              <div class="flex flex-row items-center">
+                <img
+                  id="SecondScheduleSectionLbtn"
+                  class="cursor-pointer mr-[17px]"
+                  src="/img/SecondSectionScheduleLeftIcon.png"
+                  onclick="" />
+                <div class="w-[1px] h-[18px] bg-[#7a7876]"></div>
+                <img
+                  id="SecondScheduleSectionRbtn"
+                  class="cursor-pointer ml-[17px] mr-[20px]"
+                  src="/img/SecondSectionScheduleRightIcon.png" />
+                <img
+                  class="cursor-pointer"
+                  src="/img/SecondSectionSchedulePlusIcon.png"
+                  onclick="location.href='https://www.sungkyul.ac.kr/skukr/313/subview.do?enc=Zm5jdDF8QEB8JTJGc2NoZHVsbWFuYWdlJTJGc2t1a3IlMkYzJTJGdmlldy5kbyUzRg%3D%3D'" />
+              </div>
+            </div>
+            <div
+              class="schedule-wrapper flex flex-wrap flex-row items-center justify-center overflow-hidden">
+              <!-- 학사일정은 js로 렌더링 -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--오른쪽-->
+      <div class="lg:pl-[20px] pl-0">
+        <!--자주찾는 서비스-->
+        <div
+          class="box-border flex-col mt-[30px] lg:mt-0 bg-[url('./img/SecondSectionServiceBg.png')] h-[250px] bg-right-bottom bg-no-repeat bg-white border-[#cad8e3] border-solid border-[15px] pt-[23px] pr-[25px] pb-[34px] pl-[25px] overflow-hidden">
+          <div class="flex items-center justify-between mb-[35px]">
+            <span
+              class="SecondSection_right_top_title block font-normal text-[22px]"
+              >자주찾는 서비스</span
+            >
+            <div class="flex">
+              <img
+                class="cursor-pointer"
+                src="/img/SecondSectionServicePrevIcon.png"
+                alt="" />
+              <img
+                id="ServiceBtn"
+                class="cursor-pointer mx-[10px]"
+                src="/img/SecondSectionServiceStopIcon.png"
+                alt=""
+                onclick="" />
+              <img
+                class="cursor-pointer"
+                src="/img/SecondSectionServiceNextIcon.png"
+                alt="" />
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-5 place-items-center m-0 p-0 text-center font-light">
+            <a href="" class="service_title_a">
+              <img
+                class="RotateYIcon transition-transform duration-[650ms] rotate-y-0"
+                src="./img/SecondSectionServiceIcon1.png"
+                alt="" />
+              <span class="service_title">식단안내</span>
+            </a>
+            <a href="" class="service_title_a">
+              <img
+                class="RotateYIcon transition-transform duration-[650ms] rotate-y-0"
+                src="./img/SecondSectionServiceIcon2.png"
+                alt="" />
+              <span class="service_title">입학안내</span>
+            </a>
+            <a href="" class="service_title_a">
+              <img
+                class="RotateYIcon transition-transform duration-[650ms] rotate-y-0"
+                src="./img/SecondSectionServiceIcon3.png"
+                alt="" />
+              <span class="service_title">장학안내</span>
+            </a>
+            <a href="" class="service_title_a">
+              <img
+                class="RotateYIcon transition-transform duration-[650ms] rotate-y-0"
+                src="./img/SecondSectionServiceIcon4.png"
+                alt="" />
+              <span class="service_title">등록안내</span>
+            </a>
+            <a href="" class="service_title_a">
+              <img
+                class="RotateYIcon transition-transform duration-[650ms] rotate-y-0"
+                src="./img/SecondSectionServiceIcon5.png"
+                alt="" />
+              <span class="service_title">IT서비스 안내</span>
+            </a>
+          </div>
+        </div>
+        <!--ABOUT SKU(배너이미자만 넘어가는 부분)-->
+        <div class="SecondSection_right_second m-0 p-0">
+          <div class="AboutSKU">
+            <!-- AboutSKU는 js로 렌더링 -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Hyunji-->
     <!-- 대학소개, 캠퍼스 가이드, SKU 뉴스 부분 (기존 'page3') -->
     <div class="page3 h-130vh bg-[url('img/bgIntroduce.jpg')] p-5 flex">
       <!-- 대학 소개 & 가이드 -->
@@ -862,6 +1323,5 @@
         </div>
       </div>
     </div>
-    <script src="js/thirdsection.js"></script>
   </body>
 </html>

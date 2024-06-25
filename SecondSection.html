@@ -1,149 +1,212 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="./css/SecondSection.css">
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script src="/js/SecondSection.js" defer></script>
-        <script src="/js/SecondSectionSchedule.js" defer></script>
-        <script src="/js/SecondSectionSchedule2.js" defer></script>
-        <script src="/js/AboutSKU.js" defer></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="/js/Sidebar.js" defer></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-    </head>
-    <body id="TopGo" class="Noto w-full h-screen m-0 p-0">
-        <div class="relative z-10">
-            <div id="sideMenu" class="sideMenu bg-[#295ca4] text-white py-[35px]">
-                <button id="toggleButton" class="toggleButton cursor-pointer flex flex-col items-center justify-center Noto font-medium text-[16px] top-[36%]">
-                    <span class="pb-[13px]">OPEN</span>
-                    <img id="toggleImage" src="/img/SideOpenArrow.png" alt="arrow">
-                </button>
-                <ul class="Noto flex flex-col items-center text-[16px] font-normal">
-                    <a href="" class="flex flex-col items-center py-[25px]">
-                        <img class="relative mb-[8px]" src="/img/SideBarPOPUPIcon.png" alt="">
-                        <div class="absolute w-[27px] h-[27px] bg-[#c71514] rounded-[100px] top-[70px] right-[18px] text-center">7</div>
-                        POPUP
-                    </a>
-                    <a href="" class="flex flex-col items-center py-[25px]">
-                        <img class="mb-[8px]" src="/img/SideBarQUICKIcon.png" alt="">
-                        QUICK
-                    </a>
-                    <a href="" class="flex flex-col items-center py-[25px]">
-                        <img class="mb-[8px]" src="/img/SideBarServiceIcon.png" alt="">
-                        비대면 서비스
-                    </a>
-                </ul>
-                <div>
-                    <div>
-                        <button></button>
-                        <div class></div>
-                    </div>
-                </div>
-                <a class="flex justify-center" href="#TopGo">
-                    <div class="flex items-center justify-center w-[51px] h-[51px] rounded-[100px] border border-solid border-[1px] rder-[rgba(255, 255, 255, .25)]">
-                        <img src="/img/SideBarGotoIcon.png" alt="">
-                    </div>
-                </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/SecondSection.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/SecondSection.js" defer></script>
+    <script src="/js/SecondSectionSchedule.js" defer></script>
+    <script src="/js/SecondSectionSchedule2.js" defer></script>
+    <script src="/js/AboutSKU.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/Sidebar.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body id="TopGo" class="Noto w-full h-screen m-0 p-0">
+    <div class="relative z-10">
+      <div id="sideMenu" class="sideMenu bg-[#295ca4] text-white py-[35px]">
+        <button
+          id="toggleButton"
+          class="toggleButton cursor-pointer flex flex-col items-center justify-center Noto font-medium text-[16px] top-[36%]">
+          <span class="pb-[13px]">OPEN</span>
+          <img id="toggleImage" src="/img/SideOpenArrow.png" alt="arrow" />
+        </button>
+        <ul class="Noto flex flex-col items-center text-[16px] font-normal">
+          <a href="" class="flex flex-col items-center py-[25px]">
+            <img
+              class="relative mb-[8px]"
+              src="/img/SideBarPOPUPIcon.png"
+              alt="" />
+            <div
+              class="absolute w-[27px] h-[27px] bg-[#c71514] rounded-[100px] top-[70px] right-[18px] text-center">
+              7
             </div>
+            POPUP
+          </a>
+          <a href="" class="flex flex-col items-center py-[25px]">
+            <img class="mb-[8px]" src="/img/SideBarQUICKIcon.png" alt="" />
+            QUICK
+          </a>
+          <a href="" class="flex flex-col items-center py-[25px]">
+            <img class="mb-[8px]" src="/img/SideBarServiceIcon.png" alt="" />
+            비대면 서비스
+          </a>
+        </ul>
+        <div>
+          <div>
+            <button></button>
+            <div class></div>
+          </div>
         </div>
-        <div class="relative w-full h-auto grid lg:grid-cols-2 grid-cols-1 bg-[url('./img/SecondSectionBG.jpg')] bg-cover py-[70px] px-[30px] z-0">
-            <!--SecondSection_left: 두번째 왼쪽-->
-            <div class="grid-rows-2 lg:pr-[30px] pr-0">
-                <!--left_top: 왼쪽 위-->
-                <div class="m-0">
-                    <div class="grid grid-cols-10 relative text-[white] text-[16px] font-normal text-center bg-[#003956] h-[50px] z-0">
-                        <button id="Schedulebtn1" class="Schedulebtn" autofocus>학사</button>
-                        <button id="Schedulebtn2" class="Schedulebtn">새소식</button>
-                        <button id="Schedulebtn3" class="Schedulebtn">장학/등록</button>
-                        <button id="Schedulebtn4" class="Schedulebtn">입학</button>
-                        <button id="Schedulebtn5" class="Schedulebtn">취업</button>
-                        <button id="Schedulebtn6" class="Schedulebtn">학생</button>
-                        <button id="Schedulebtn7" class="Schedulebtn">글로벌</button>
-                        <button id="Schedulebtn8" class="Schedulebtn">일반</button>
-                        <button id="Schedulebtn9" class="Schedulebtn">비교과</button>
-                        <a class="absolute top-0 right-0 w-[50px] h-[50px]" href="https://www.sungkyul.ac.kr/skukr/343/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NiUyRmFydGNsTGlzdC5kbyUzRg%3D%3D">
-                            <div class="flex justify-center items-center w-[50px] h-[50px] float-right m-0 p-0 bg-[#295CA4]">
-                                <img src="./img/SecondSectionPlusIcon.png" alt="">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="bg-white">
-                        <ul class="SecondScheduleSection grid grid-rows-5 place-items-center">
-                            <!--성결대학교 일정 js로 렌더링-->
-                        </ul>
-                    </div>
-                </div>
-                <!-- 학사일정 -->
-                <div class=" mt-[30px] lg:mt-0 pt-0 lg:pt-[55px]">
-                    <div class="h-[250.6px] box-border bg-[url('./img/SecondSectionScheduleBg.png')] bg-cover px-[35px] pt-[25px] pb-0">
-                        <div class="flex flex-row items-center justify-between mb-[28px]">
-                            <div class="flex flex-row items-center">
-                                <span class="text-[22px] text-white">
-                                    학사일정
-                                </span>
-                                <div class="h-[1px] w-[77px] border-white border-solid border-[1px] ml-[30px]"></div>
-                            </div>
-                            <div class="flex flex-row items-center">
-                                <img id="SecondScheduleSectionLbtn" class="cursor-pointer mr-[17px]" src="/img/SecondSectionScheduleLeftIcon.png" onclick="">
-                                <div class="w-[1px] h-[18px] bg-[#7a7876]"></div>
-                                <img id="SecondScheduleSectionRbtn" class="cursor-pointer ml-[17px] mr-[20px]" src="/img/SecondSectionScheduleRightIcon.png" >
-                                <img class="cursor-pointer" src="/img/SecondSectionSchedulePlusIcon.png" onclick="location.href='https://www.sungkyul.ac.kr/skukr/313/subview.do?enc=Zm5jdDF8QEB8JTJGc2NoZHVsbWFuYWdlJTJGc2t1a3IlMkYzJTJGdmlldy5kbyUzRg%3D%3D'">
-                            </div>
-                        </div>
-                        <div class="schedule-wrapper flex flex-wrap flex-row items-center justify-center overflow-hidden">
-                            <!-- 학사일정은 js로 렌더링 -->
-                        </div>                        
-                    </div>
-                </div>
-            </div>
-            <!--오른쪽-->
-            <div class="lg:pl-[20px] pl-0">
-                <!--자주찾는 서비스-->
-                <div class="box-border flex-col mt-[30px] lg:mt-0 bg-[url('./img/SecondSectionServiceBg.png')] h-[250px] bg-right-bottom bg-no-repeat bg-white border-[#cad8e3] border-solid border-[15px] pt-[23px] pr-[25px] pb-[34px] pl-[25px] overflow-hidden">
-                    <div class="flex items-center justify-between mb-[35px]">
-                        <span class="SecondSection_right_top_title block font-normal text-[22px]">자주찾는 서비스</span>
-                        <div class="flex">
-                            <img class="cursor-pointer" src="/img/SecondSectionServicePrevIcon.png" alt="">
-                            <img id="ServiceBtn" class="cursor-pointer mx-[10px]" src="/img/SecondSectionServiceStopIcon.png" alt="" onclick="">
-                            <img class="cursor-pointer" src="/img/SecondSectionServiceNextIcon.png" alt="">
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-5 place-items-center m-0 p-0 text-center font-light">
-                        <a href="" class="service_title_a">
-                            <img class="RotateYIcon transition-transform duration-[650ms] rotate-y-0" src="./img/SecondSectionServiceIcon1.png" alt="">
-                            <span class="service_title">식단안내</span>
-                        </a>
-                        <a href="" class="service_title_a">
-                            <img class="RotateYIcon transition-transform duration-[650ms] rotate-y-0" src="./img/SecondSectionServiceIcon2.png" alt="">
-                            <span class="service_title">입학안내</span>
-                        </a>
-                        <a href="" class="service_title_a">
-                            <img class="RotateYIcon transition-transform duration-[650ms] rotate-y-0" src="./img/SecondSectionServiceIcon3.png" alt="">
-                            <span class="service_title">장학안내</span>
-                        </a>
-                        <a href="" class="service_title_a">
-                            <img class="RotateYIcon transition-transform duration-[650ms] rotate-y-0" src="./img/SecondSectionServiceIcon4.png" alt="">
-                            <span class="service_title">등록안내</span>
-                        </a>
-                        <a href="" class="service_title_a">
-                            <img class="RotateYIcon transition-transform duration-[650ms] rotate-y-0" src="./img/SecondSectionServiceIcon5.png" alt="">
-                            <span class="service_title">IT서비스 안내</span>
-                        </a>
-                    </div>
-                </div>
-                <!--ABOUT SKU(배너이미자만 넘어가는 부분)-->
-                <div class="SecondSection_right_second m-0 p-0">
-                    <div class="AboutSKU">
-                        <!-- AboutSKU는 js로 렌더링 -->
-                    </div>
-                </div>                
-            </div>
+        <a class="flex justify-center" href="#TopGo">
+          <div
+            class="flex items-center justify-center w-[51px] h-[51px] rounded-[100px] border border-solid border-[1px] rder-[rgba(255, 255, 255, .25)]">
+            <img src="/img/SideBarGotoIcon.png" alt="" />
+          </div>
+        </a>
+      </div>
+    </div>
+    <div
+      class="relative w-full h-auto grid lg:grid-cols-2 grid-cols-1 bg-[url('./img/SecondSectionBG.jpg')] bg-cover py-[70px] px-[30px] z-0">
+      <!--SecondSection_left: 두번째 왼쪽-->
+      <div class="grid-rows-2 lg:pr-[30px] pr-0">
+        <!--left_top: 왼쪽 위-->
+        <div class="m-0">
+          <div
+            class="grid grid-cols-10 relative text-[white] text-[16px] font-normal text-center bg-[#003956] h-[50px] z-0">
+            <button id="Schedulebtn1" class="Schedulebtn" autofocus>
+              학사
+            </button>
+            <button id="Schedulebtn2" class="Schedulebtn">새소식</button>
+            <button id="Schedulebtn3" class="Schedulebtn">장학/등록</button>
+            <button id="Schedulebtn4" class="Schedulebtn">입학</button>
+            <button id="Schedulebtn5" class="Schedulebtn">취업</button>
+            <button id="Schedulebtn6" class="Schedulebtn">학생</button>
+            <button id="Schedulebtn7" class="Schedulebtn">글로벌</button>
+            <button id="Schedulebtn8" class="Schedulebtn">일반</button>
+            <button id="Schedulebtn9" class="Schedulebtn">비교과</button>
+            <a
+              class="absolute top-0 right-0 w-[50px] h-[50px]"
+              href="https://www.sungkyul.ac.kr/skukr/343/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NiUyRmFydGNsTGlzdC5kbyUzRg%3D%3D">
+              <div
+                class="flex justify-center items-center w-[50px] h-[50px] float-right m-0 p-0 bg-[#295CA4]">
+                <img src="./img/SecondSectionPlusIcon.png" alt="" />
+              </div>
+            </a>
+          </div>
+          <div class="bg-white">
+            <ul
+              class="SecondScheduleSection grid grid-rows-5 place-items-center">
+              <!--성결대학교 일정 js로 렌더링-->
+            </ul>
+          </div>
         </div>
-    </body>
+        <!-- 학사일정 -->
+        <div class="mt-[30px] lg:mt-0 pt-0 lg:pt-[55px]">
+          <div
+            class="h-[250.6px] box-border bg-[url('./img/SecondSectionScheduleBg.png')] bg-cover px-[35px] pt-[25px] pb-0">
+            <div class="flex flex-row items-center justify-between mb-[28px]">
+              <div class="flex flex-row items-center">
+                <span class="text-[22px] text-white"> 학사일정 </span>
+                <div
+                  class="h-[1px] w-[77px] border-white border-solid border-[1px] ml-[30px]"></div>
+              </div>
+              <div class="flex flex-row items-center">
+                <img
+                  id="SecondScheduleSectionLbtn"
+                  class="cursor-pointer mr-[17px]"
+                  src="/img/SecondSectionScheduleLeftIcon.png"
+                  onclick="" />
+                <div class="w-[1px] h-[18px] bg-[#7a7876]"></div>
+                <img
+                  id="SecondScheduleSectionRbtn"
+                  class="cursor-pointer ml-[17px] mr-[20px]"
+                  src="/img/SecondSectionScheduleRightIcon.png" />
+                <img
+                  class="cursor-pointer"
+                  src="/img/SecondSectionSchedulePlusIcon.png"
+                  onclick="location.href='https://www.sungkyul.ac.kr/skukr/313/subview.do?enc=Zm5jdDF8QEB8JTJGc2NoZHVsbWFuYWdlJTJGc2t1a3IlMkYzJTJGdmlldy5kbyUzRg%3D%3D'" />
+              </div>
+            </div>
+            <div
+              class="schedule-wrapper flex flex-wrap flex-row items-center justify-center overflow-hidden">
+              <!-- 학사일정은 js로 렌더링 -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--오른쪽-->
+      <div class="lg:pl-[20px] pl-0">
+        <!--자주찾는 서비스-->
+        <div
+          class="box-border flex-col mt-[30px] lg:mt-0 bg-[url('./img/SecondSectionServiceBg.png')] h-[250px] bg-right-bottom bg-no-repeat bg-white border-[#cad8e3] border-solid border-[15px] pt-[23px] pr-[25px] pb-[34px] pl-[25px] overflow-hidden">
+          <div class="flex items-center justify-between mb-[35px]">
+            <span
+              class="SecondSection_right_top_title block font-normal text-[22px]"
+              >자주찾는 서비스</span
+            >
+            <div class="flex">
+              <img
+                class="cursor-pointer"
+                src="/img/SecondSectionServicePrevIcon.png"
+                alt="" />
+              <img
+                id="ServiceBtn"
+                class="cursor-pointer mx-[10px]"
+                src="/img/SecondSectionServiceStopIcon.png"
+                alt=""
+                onclick="" />
+              <img
+                class="cursor-pointer"
+                src="/img/SecondSectionServiceNextIcon.png"
+                alt="" />
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-5 place-items-center m-0 p-0 text-center font-light">
+            <a href="" class="service_title_a">
+              <img
+                class="RotateYIcon transition-transform duration-[650ms] rotate-y-0"
+                src="./img/SecondSectionServiceIcon1.png"
+                alt="" />
+              <span class="service_title">식단안내</span>
+            </a>
+            <a href="" class="service_title_a">
+              <img
+                class="RotateYIcon transition-transform duration-[650ms] rotate-y-0"
+                src="./img/SecondSectionServiceIcon2.png"
+                alt="" />
+              <span class="service_title">입학안내</span>
+            </a>
+            <a href="" class="service_title_a">
+              <img
+                class="RotateYIcon transition-transform duration-[650ms] rotate-y-0"
+                src="./img/SecondSectionServiceIcon3.png"
+                alt="" />
+              <span class="service_title">장학안내</span>
+            </a>
+            <a href="" class="service_title_a">
+              <img
+                class="RotateYIcon transition-transform duration-[650ms] rotate-y-0"
+                src="./img/SecondSectionServiceIcon4.png"
+                alt="" />
+              <span class="service_title">등록안내</span>
+            </a>
+            <a href="" class="service_title_a">
+              <img
+                class="RotateYIcon transition-transform duration-[650ms] rotate-y-0"
+                src="./img/SecondSectionServiceIcon5.png"
+                alt="" />
+              <span class="service_title">IT서비스 안내</span>
+            </a>
+          </div>
+        </div>
+        <!--ABOUT SKU(배너이미자만 넘어가는 부분)-->
+        <div class="SecondSection_right_second m-0 p-0">
+          <div class="AboutSKU">
+            <!-- AboutSKU는 js로 렌더링 -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -24,10 +24,10 @@
     <link rel="stylesheet" href="css/thirdsection.css" />
   </head>
 
-  <body id="TopGo" class="Noto w-full h-screen m-0 p-0 overflow-x-hidden">
+  <body class="Noto w-full h-screen m-0 p-0 overflow-x-hidden">
     <!--Hyewon-->
     <!-- firstSection container -->
-    <div class="w-full h-full pb-[3px]">
+    <div id="TopGo" class="w-full h-full pb-[3px]">
       <!--firstSection 영상 background-->
       <div class="h-screen w-full absolute top-0 left-0 overflow-hidden z-[-1]">
         <video
@@ -292,7 +292,8 @@
       </div>
     </div>
 
-    <!--Eunah-->
+    <!--Eunah: 은아-->
+    <!--사이드 메뉴바-->
     <div class="relative z-10">
       <div id="sideMenu" class="sideMenu bg-[#295ca4] text-white py-[35px]">
         <button
@@ -338,9 +339,9 @@
     </div>
     <div
       class="relative w-full h-auto grid lg:grid-cols-2 grid-cols-1 bg-[url('./img/SecondSectionBG.jpg')] bg-cover py-[70px] px-[30px] z-0">
-      <!--SecondSection_left: 두번째 왼쪽-->
+      <!--왼쪽: 항목별 세부일정 + 학사일정-->
       <div class="grid-rows-2 lg:pr-[30px] pr-0">
-        <!--left_top: 왼쪽 위-->
+        <!--항목별 세부 일정 (왼쪽상단)-->
         <div class="m-0">
           <div
             class="grid grid-cols-10 relative text-[white] text-[16px] font-normal text-center bg-[#003956] h-[50px] z-0">
@@ -398,23 +399,18 @@
                   onclick="location.href='https://www.sungkyul.ac.kr/skukr/313/subview.do?enc=Zm5jdDF8QEB8JTJGc2NoZHVsbWFuYWdlJTJGc2t1a3IlMkYzJTJGdmlldy5kbyUzRg%3D%3D'" />
               </div>
             </div>
-            <div
-              class="schedule-wrapper flex flex-wrap flex-row items-center justify-center overflow-hidden">
+            <div class="schedule-wrapper flex flex-wrap flex-row items-center justify-center overflow-hidden">
               <!-- 학사일정은 js로 렌더링 -->
             </div>
           </div>
         </div>
       </div>
-      <!--오른쪽-->
+      <!--오른쪽: 자주찾는 서비스 + About SKU-->
       <div class="lg:pl-[20px] pl-0">
         <!--자주찾는 서비스-->
-        <div
-          class="box-border flex-col mt-[30px] lg:mt-0 bg-[url('./img/SecondSectionServiceBg.png')] h-[250px] bg-right-bottom bg-no-repeat bg-white border-[#cad8e3] border-solid border-[15px] pt-[23px] pr-[25px] pb-[34px] pl-[25px] overflow-hidden">
+        <div class="box-border flex-col mt-[30px] lg:mt-0 bg-[url('./img/SecondSectionServiceBg.png')] h-[250px] bg-right-bottom bg-no-repeat bg-white border-[#cad8e3] border-solid border-[15px] pt-[23px] pr-[25px] pb-[34px] pl-[25px] overflow-hidden">
           <div class="flex items-center justify-between mb-[35px]">
-            <span
-              class="SecondSection_right_top_title block font-normal text-[22px]"
-              >자주찾는 서비스</span
-            >
+            <span class="SecondSection_right_top_title block font-normal text-[22px]">자주찾는 서비스</span>
             <div class="flex">
               <img
                 class="cursor-pointer"

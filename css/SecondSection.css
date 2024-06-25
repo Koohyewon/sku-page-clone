@@ -1,0 +1,118 @@
+.titillium {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.Noto {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/*사이드바*/
+.sideMenu {
+  position: fixed;
+  right: -105px; /* 초기에는 화면 밖에 위치 */
+  top: 0;
+  width: 105px;
+  height: 100%;
+  transition: right 0.3s ease-in-out;
+}
+
+.sideMenu.open {
+  right: 0; /* 화면 안으로 이동 */
+}
+
+.toggleButton {
+  position: absolute;
+  left: -70px; /* 사이드메뉴 왼쪽에 버튼 위치 */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70px;
+  height: 107px;
+  background-color: #264F86CC;
+}
+/*'자주 찾는 서비스' a 태그 기본 설정*/
+.service_title_a:link{
+  color: #A5A9AC;
+  text-decoration: none;
+}
+
+.service_title_a:visited{
+  color: #A5A9AC;
+  text-decoration: none;
+}
+
+.service_title_a:hover{
+  color: #A5A9AC;
+  text-decoration: none;
+}
+
+/*분야별 일정 버튼 ul 버튼 기본 설정*/
+.Schedulebtn:focus {
+  background: #c71514;
+  width: 100%;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  transform: scaleY(1.3);
+  transform-origin: bottom center;
+  font-size: 20px;
+  color: white;
+  overflow: initial;
+}
+
+.scheduletemplate:hover {
+  background-color: #F7F7F7;
+  transition: .4s;
+}
+
+.scheduletemplateC:hover {
+  color: #C7161C;
+  font-weight: 600;
+}
+
+/*텍스가 div 넘치려고 할 때 ∙∙∙ 처리*/
+.truncate {
+  display: inline-block;
+  text-overflow: ellipsis; /*텍스가 div 넘치려고 할 때 ∙∙∙ 처리*/
+  white-space: nowrap; /*텍스트가 길어서 부모 요소 안의 가로폭을 넘어가더라도 자동으로 줄바꿈 처리 X*/
+}
+
+/*자주 찾는 서비스 밑줄*/
+.service_title{
+  display: block;
+  padding-top: 6px;
+  text-align: center;
+  font-size: 15px;
+  text-transform:uppercase;
+  color: #666;
+}
+
+.service_title:after {
+  display:block;
+  content: '';
+  border-bottom: solid 1px #A1A5A8;
+  transform: scaleX(0);  
+  transition: transform 200ms ease-in-out;
+}
+
+.service_title_a:hover .service_title:after  { 
+  transform: scaleX(1);
+}
+
+.service_title:after {
+  transform-origin: 0% 90%;
+}
+
+.satellites {
+  border: 4px solid black;
+  animation: rotate-axis 10s linear infinite;
+}
+
+/*아이콘 y축 기준 360도 회전*/
+.rotate-y-0 {
+  transform: rotateY(0deg);
+}
+.rotate-y-360 {
+  transform: rotateY(360deg);
+}

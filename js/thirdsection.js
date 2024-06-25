@@ -96,10 +96,10 @@ const collegeData = [
 function updatePageIndex() {
 	const pageIndex = document.getElementById('pageIndex');
 	const totalColleges = collegeData.length;
-	pageIndex.textContent = `${String(currentIndex + 1).padStart(2, '0')}/${String(totalColleges).padStart(2, '0')}`;
+	pageIndex.textContent = `${String(currentIndexDepart + 1).padStart(2, '0')}/${String(totalColleges).padStart(2, '0')}`;
 }
 
-let currentIndex = 0;
+let currentIndexDepart = 0;
 
 function collegeInfoChange() {
 	const collegeImage = document.getElementById('collegeImage');
@@ -114,7 +114,7 @@ function collegeInfoChange() {
 
 	setTimeout(() => {
 		// 대학 정보 변경
-		const college = collegeData[currentIndex];
+		const college = collegeData[currentIndexDepart];
 		collegeImage.src = college.image;
 		collegeName.textContent = college.name;
 		collegeInfo.textContent = college.info;
@@ -147,12 +147,12 @@ function collegeInfoChange() {
 
 // 버튼 누르면 인덱스 조절해서 대학 내용 바꿈 (끝에서 다시 처음으로 갈 수 있게)
 document.getElementById('prevBtn').addEventListener('click', () => {
-	currentIndex = (currentIndex - 1 + collegeData.length) % collegeData.length;
+	currentIndexDepart = (currentIndexDepart - 1 + collegeData.length) % collegeData.length;
 	collegeInfoChange();
 });
 
 document.getElementById('nextBtn').addEventListener('click', () => {
-	currentIndex = (currentIndex + 1) % collegeData.length;
+	currentIndexDepart = (currentIndexDepart + 1) % collegeData.length;
 	collegeInfoChange();
 });
 

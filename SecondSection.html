@@ -5,24 +5,59 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="./css/SecondSection.css">
+        <script src="https://cdn.tailwindcss.com"></script>
         <script src="/js/SecondSection.js" defer></script>
         <script src="/js/SecondSectionSchedule.js" defer></script>
         <script src="/js/SecondSectionSchedule2.js" defer></script>
         <script src="/js/AboutSKU.js" defer></script>
-        <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="/js/Sidebar.js" defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
     </head>
-    <body class="Noto w-full h-screen m-0 p-0">
-        <div class="w-full h-auto grid lg:grid-cols-2 grid-cols-1 bg-[url('./img/SecondSectionBG.jpg')] bg-cover py-[70px] px-[30px]">
+    <body id="TopGo" class="Noto w-full h-screen m-0 p-0">
+        <div class="relative z-10">
+            <div id="sideMenu" class="sideMenu bg-[#295ca4] text-white py-[35px]">
+                <button id="toggleButton" class="toggleButton cursor-pointer flex flex-col items-center justify-center Noto font-medium text-[16px] top-[36%]">
+                    <span class="pb-[13px]">OPEN</span>
+                    <img id="toggleImage" src="/img/SideOpenArrow.png" alt="arrow">
+                </button>
+                <ul class="Noto flex flex-col items-center text-[16px] font-normal">
+                    <a href="" class="flex flex-col items-center py-[25px]">
+                        <img class="relative mb-[8px]" src="/img/SideBarPOPUPIcon.png" alt="">
+                        <div class="absolute w-[27px] h-[27px] bg-[#c71514] rounded-[100px] top-[70px] right-[18px] text-center">7</div>
+                        POPUP
+                    </a>
+                    <a href="" class="flex flex-col items-center py-[25px]">
+                        <img class="mb-[8px]" src="/img/SideBarQUICKIcon.png" alt="">
+                        QUICK
+                    </a>
+                    <a href="" class="flex flex-col items-center py-[25px]">
+                        <img class="mb-[8px]" src="/img/SideBarServiceIcon.png" alt="">
+                        비대면 서비스
+                    </a>
+                </ul>
+                <div>
+                    <div>
+                        <button></button>
+                        <div class></div>
+                    </div>
+                </div>
+                <a class="flex justify-center" href="#TopGo">
+                    <div class="flex items-center justify-center w-[51px] h-[51px] rounded-[100px] border border-solid border-[1px] rder-[rgba(255, 255, 255, .25)]">
+                        <img src="/img/SideBarGotoIcon.png" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="relative w-full h-auto grid lg:grid-cols-2 grid-cols-1 bg-[url('./img/SecondSectionBG.jpg')] bg-cover py-[70px] px-[30px] z-0">
             <!--SecondSection_left: 두번째 왼쪽-->
             <div class="grid-rows-2 lg:pr-[30px] pr-0">
                 <!--left_top: 왼쪽 위-->
                 <div class="m-0">
-                    <div class="grid grid-cols-10 relative text-[white] text-[16px] font-normal text-center bg-[#003956] h-[50px]">
+                    <div class="grid grid-cols-10 relative text-[white] text-[16px] font-normal text-center bg-[#003956] h-[50px] z-0">
                         <button id="Schedulebtn1" class="Schedulebtn" autofocus>학사</button>
                         <button id="Schedulebtn2" class="Schedulebtn">새소식</button>
                         <button id="Schedulebtn3" class="Schedulebtn">장학/등록</button>

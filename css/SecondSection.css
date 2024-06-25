@@ -9,6 +9,30 @@
   font-optical-sizing: auto;
   font-style: normal;
 }
+
+/*사이드바*/
+.sideMenu {
+  position: fixed;
+  right: -105px; /* 초기에는 화면 밖에 위치 */
+  top: 0;
+  width: 105px;
+  height: 100%;
+  transition: right 0.3s ease-in-out;
+}
+
+.sideMenu.open {
+  right: 0; /* 화면 안으로 이동 */
+}
+
+.toggleButton {
+  position: absolute;
+  left: -70px; /* 사이드메뉴 왼쪽에 버튼 위치 */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70px;
+  height: 107px;
+  background-color: #264F86CC;
+}
 /*'자주 찾는 서비스' a 태그 기본 설정*/
 .service_title_a:link{
   color: #A5A9AC;

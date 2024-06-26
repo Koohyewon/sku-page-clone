@@ -1,1 +1,7 @@
+.nav:hover #search {
+  color: #003956; /* 파란색 */
+}
 
+.nav:hover #menu {
+  color: #c71514; /* 빨간색 */
+}

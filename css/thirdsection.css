@@ -30,3 +30,23 @@
   transform: translate(17%, 0);
   opacity: 1;
 }
+
+.footer_info {
+  position: relative;
+}
+.footer_info::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(118, 118, 118);
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: none;
+}
+.footer_info:hover::after {
+  transform: scaleX(1);
+  transition: transform 0.3s ease-in;
+}

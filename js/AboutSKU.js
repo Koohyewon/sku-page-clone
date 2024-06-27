@@ -8,7 +8,7 @@ $(document).ready(function () {
         },
         {
             "number" : "02",
-            "AboutSKULink": "https://www.youtube.com/watch?v=qQU7cquSmGU",
+            "AboutSKULink": "https://www.youtube.com/watch?v=F62uflyKOQs",
             "img": "/img/AboutSKUBImg2.jpg",
             "content": "성결대학교 소개",
         },

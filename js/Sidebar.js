@@ -18,9 +18,3 @@ toggleButton.addEventListener('click', function() {
     isOpen = !isOpen;
 });
 
-
-//const ToGoBtn = document.getElementsByClassName('ToGoBtn')
-
-//ToGoBtn.addEventListener('click', function(){
-   // if ()
-//});

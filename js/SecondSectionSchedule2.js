@@ -36,15 +36,7 @@ function displaySchedule2(schedule) {
     let scheduletemplate2 = '';
 
     scheduletemplate2 += `
-        <style>
-                .rotate-y-0 {
-        transform: rotateY(0deg);
-        }
-        .rotate-y-360 {
-        transform: rotateY(360deg);
-        }
-        </style>
-        <div class="flex flex-row box-border mb-[20px] w-2/4 overflow-hidden">
+        <div class="schedule-item flex flex-row box-border mb-[20px] w-2/4 overflow-hidden">
             <div class="RotateYIcon transition-transform duration-[650ms] rotate-y-0 titillium flex items-center justify-center w-[60px] h-[60px] bg-[#275fa8] rounded-full bg-[url('./img/SecondSectionScheduleRoundIconBG.png')] text-white text-[26px] font-normal">
                 ${schedule.day1}
             </div>
@@ -53,7 +45,7 @@ function displaySchedule2(schedule) {
                 <strong class="truncate text-white text-[17px] font-medium">${schedule.content1}</strong>
             </div>
         </div>
-        <div class="flex flex-row mb-[20px] w-2/4">
+        <div class="schedule-item flex flex-row mb-[20px] w-2/4">
             <div class="RotateYIcon transition-transform duration-[650ms] rotate-y-0 titillium flex items-center justify-center w-[60px] h-[60px] bg-[#275fa8] rounded-full bg-[url('./img/SecondSectionScheduleRoundIconBG.png')] text-white text-[26px] font-normal">
                 ${schedule.day2}
             </div>
@@ -62,7 +54,7 @@ function displaySchedule2(schedule) {
                 <strong class="text-white text-[17px] font-medium">${schedule.content2}</strong>
             </div>
         </div>
-        <div class="flex flex-row mb-[20px] w-2/4">
+        <div class="schedule-item flex flex-row mb-[20px] w-2/4">
             <div class="RotateYIcon transition-transform duration-[650ms] rotate-y-0 titillium flex items-center justify-center w-[60px] h-[60px] bg-[#275fa8] rounded-full bg-[url('./img/SecondSectionScheduleRoundIconBG.png')] text-white text-[26px] font-normal">
                 ${schedule.day3}
             </div>
@@ -71,7 +63,7 @@ function displaySchedule2(schedule) {
                 <strong class="text-white text-[17px] font-medium">${schedule.content3}</strong>
             </div>
         </div>
-        <div class="flex flex-row mb-[20px] w-2/4">
+        <div class="schedule-item flex flex-row mb-[20px] w-2/4">
             <div class="RotateYIcon transition-transform duration-[650ms] rotate-y-0 titillium flex items-center justify-center w-[60px] h-[60px] bg-[#275fa8] rounded-full bg-[url('./img/SecondSectionScheduleRoundIconBG.png')] text-white text-[26px] font-normal">
                 ${schedule.day4}
             </div>
@@ -83,6 +75,20 @@ function displaySchedule2(schedule) {
     `;
 
     $(".schedule-wrapper").html(scheduletemplate2);
+
+    // 아이콘 회전 애니메이션 추가
+    const icons = document.querySelectorAll('.RotateYIcon');
+    icons.forEach(icon => {
+        icon.addEventListener('mouseover', () => {
+            icon.classList.remove('rotate-y-0');
+            icon.classList.add('rotate-y-360');
+        });
+
+        icon.addEventListener('mouseout', () => {
+            icon.classList.remove('rotate-y-360');
+            icon.classList.add('rotate-y-0');
+        });
+    });
 }
 
 // 초기 설정
@@ -95,22 +101,20 @@ displaySchedule2(scheduledata2[currentIndex]);
 $("#SecondScheduleSectionLbtn").click(function() {
     if (currentIndex > 0) {
         currentIndex--;
-        displaySchedule2(scheduledata2[currentIndex]);
-    }else if (currentIndex === 0) {
-        currentIndex++;  
-        displaySchedule2(scheduledata2[currentIndex]);
+    } else {
+        currentIndex = scheduledata2.length - 1; // 맨 끝으로 이동
     }
+    displaySchedule2(scheduledata2[currentIndex]);
 });
 
 // 다음 버튼 클릭 시 실행되는 함수
 $("#SecondScheduleSectionRbtn").click(function() {
-    if (currentIndex === 0) {
+    if (currentIndex < scheduledata2.length - 1) {
         currentIndex++;
-        displaySchedule2(scheduledata2[currentIndex]);
-    } else if (currentIndex === 1) {
-        currentIndex--;  
-        displaySchedule2(scheduledata2[currentIndex]);
+    } else {
+        currentIndex = 0; // 맨 처음으로 이동
     }
+    displaySchedule2(scheduledata2[currentIndex]);
 });
 
 // 스케줄 뷰 업데이트 함수
@@ -120,6 +124,3 @@ function updateScheduleView() {
 
     $(".schedule-wrapper").css("transform", `translateX(${newPosition}px)`);
 }
-
-
-

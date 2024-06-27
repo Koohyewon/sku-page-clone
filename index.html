@@ -323,14 +323,14 @@
     <!--Eunah😭은아-->
     <!--사이드 메뉴바-->
     <div class="relative z-10">
-      <div id="sideMenu" class="sideMenu bg-[#295ca4] text-white py-[35px]">
+      <div id="sideMenu" class="sideMenu bg-[#295ca4] text-white">
         <button
           id="toggleButton"
           class="toggleButton cursor-pointer flex flex-col items-center justify-center Noto font-medium text-[16px] top-[36%]">
           <span class="pb-[13px]">OPEN</span>
           <img id="toggleImage" src="/img/SideOpenArrow.png" alt="arrow" />
         </button>
-        <ul class="Noto flex flex-col items-center text-[16px] font-normal">
+        <ul class="Noto flex flex-col items-center text-[16px] font-normal py-[35px]">
           <a href="" class="flex flex-col items-center py-[25px]">
             <img
               class="relative mb-[8px]"
@@ -352,14 +352,17 @@
           </a>
         </ul>
         <div>
-          <div>
-            <button></button>
-            <div class></div>
+          <div class="titillium grid grid-rows-4 font-normal">
+            <button class="py-[3px] mb-[8px]">INRO</button>
+            <button class="py-[3px] mb-[8px]">SKU INFO</button>
+            <button class="py-[3px] mb-[8px]">SKU INTD</button>
+            <button class="py-[3px] mb-[8px]">SNS</button>
+            <div class=""></div>
           </div>
         </div>
         <a class="flex justify-center" href="#TopGo">
           <div
-            class="flex items-center justify-center w-[51px] h-[51px] rounded-[100px] border border-solid border-[1px] rder-[rgba(255, 255, 255, .25)]">
+            class="flex items-center justify-center w-[51px] h-[51px] rounded-[100px] border border-solid border-[1px] rder-[rgba(255, 255, 255, .25)] mt-[40px]">
             <img src="/img/SideBarGotoIcon.png" alt="" />
           </div>
         </a>
@@ -371,27 +374,21 @@
       <div class="grid-rows-2 lg:pr-[30px] pr-0">
         <!--항목별 세부 일정 (왼쪽상단)-->
         <div class="m-0">
-          <div
-            class="grid grid-cols-10 relative text-[white] text-[16px] font-normal text-center bg-[#003956] h-[50px] z-0">
-            <button id="Schedulebtn1" class="Schedulebtn" autofocus>
-              학사
-            </button>
-            <button id="Schedulebtn2" class="Schedulebtn">새소식</button>
-            <button id="Schedulebtn3" class="Schedulebtn">장학/등록</button>
-            <button id="Schedulebtn4" class="Schedulebtn">입학</button>
-            <button id="Schedulebtn5" class="Schedulebtn">취업</button>
-            <button id="Schedulebtn6" class="Schedulebtn">학생</button>
-            <button id="Schedulebtn7" class="Schedulebtn">글로벌</button>
-            <button id="Schedulebtn8" class="Schedulebtn">일반</button>
-            <button id="Schedulebtn9" class="Schedulebtn">비교과</button>
-            <a
-              class="absolute top-0 right-0 w-[50px] h-[50px]"
-              href="https://www.sungkyul.ac.kr/skukr/343/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NiUyRmFydGNsTGlzdC5kbyUzRg%3D%3D">
-              <div
-                class="flex justify-center items-center w-[50px] h-[50px] float-right m-0 p-0 bg-[#295CA4]">
-                <img src="./img/SecondSectionPlusIcon.png" alt="" />
-              </div>
-            </a>
+          <div class="grid grid-cols-10 relative text-[white] text-[16px] font-normal text-center bg-[#003956] h-[50px]">
+              <button id="Schedulebtn1" class="button" autofocus>학사</button>
+              <button id="Schedulebtn2" class="button">새소식</button>
+              <button id="Schedulebtn3" class="button">장학/등록</button>
+              <button id="Schedulebtn4" class="button">입학</button>
+              <button id="Schedulebtn5" class="button">취업</button>
+              <button id="Schedulebtn6" class="button">학생</button>
+              <button id="Schedulebtn7" class="button">글로벌</button>
+              <button id="Schedulebtn8" class="button">일반</button>
+              <button id="Schedulebtn9" class="button">비교과</button>
+              <a class="absolute top-0 right-0 w-[50px] h-[50px]" href="https://www.sungkyul.ac.kr/skukr/343/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGc2t1a3IlMkY5NiUyRmFydGNsTGlzdC5kbyUzRg%3D%3D">
+                  <div class="flex justify-center items-center w-[50px] h-[50px] float-right m-0 p-0 bg-[#295CA4]">
+                      <img src="./img/SecondSectionPlusIcon.png" alt="">
+                  </div>
+              </a>
           </div>
           <div class="bg-white">
             <ul

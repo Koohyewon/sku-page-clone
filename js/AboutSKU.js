@@ -64,6 +64,7 @@ $(document).ready(function () {
                 </a>
             `;
         $(".AboutSKU").html(aboutskutemplate);
+        attachEventListeners();
     }
 
     function startSlideshow() {
@@ -77,21 +78,23 @@ $(document).ready(function () {
         clearInterval(slideshowInterval);
     }
 
-    $('#prev').click(function () {
-        stopSlideshow();
-        currentIndex = (currentIndex - 1 + AboutSKUIMG.length) % AboutSKUIMG.length;
-        displayAboutSKU(currentIndex);
-    });
+    function attachEventListeners() {
+        $('#prev').click(function () {
+            stopSlideshow();
+            currentIndex = (currentIndex - 1 + AboutSKUIMG.length) % AboutSKUIMG.length;
+            displayAboutSKU(currentIndex);
+        });
 
-    $('#next').click(function () {
-        stopSlideshow();
-        currentIndex = (currentIndex + 1) % AboutSKUIMG.length;
-        displayAboutSKU(currentIndex);
-    });
+        $('#next').click(function () {
+            stopSlideshow();
+            currentIndex = (currentIndex + 1) % AboutSKUIMG.length;
+            displayAboutSKU(currentIndex);
+        });
 
-    $('#stop').click(function () {
-        stopSlideshow();
-    });
+        $('#stop').click(function () {
+            stopSlideshow();
+        });
+    }
 
     // 초기 화면 표시
     displayAboutSKU(currentIndex);
